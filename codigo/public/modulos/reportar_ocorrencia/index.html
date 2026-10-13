@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flamer | Reportar Ocorrência</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../assets/css/sidebar.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+            <path d="M12 8c-1.5 2.5-3 4.5-3 6.5a3 3 0 006 0C15 12.5 13.5 10.5 12 8z" fill="#FDE68A"/>
+          </svg>
+        </div>
+        <span class="brand-name">Flamer</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../../index.html" class="nav-item" style="--i:0">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="../dashboard/index.html" class="nav-item" style="--i:1">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="../focos_ativos/index.html" class="nav-item" style="--i:2">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/><circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          <span>Focos Ativos</span>
+        </a>
+        <a href="../reportar_ocorrencia/index.html" class="nav-item active" style="--i:3">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M14 17h6M17 14v6"/>
+          </svg>
+          <span>Reportar</span>
+        </a>
+        <a href="../qualidade_ar/index.html" class="nav-item" style="--i:4">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 6h18M3 12h18M3 18h18"/><circle cx="7" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>Qualidade do Ar</span>
+        </a>
+        <a href="../minha_propriedade/index.html" class="nav-item" style="--i:5">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+          <span>Minha Propriedade</span>
+        </a>
+        <a href="../relatorios/index.html" class="nav-item" style="--i:6">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M9 17H7a4 4 0 010-8h2"/><path d="M15 7h2a4 4 0 010 8h-2"/><line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+          <span>Relatórios</span>
+        </a>
+        <a href="../historico_queimadas/index.html" class="nav-item" style="--i:7">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>Histórico</span>
+        </a>
+        <a href="../alertas/index.html" class="nav-item" style="--i:8">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+          <span>Alertas</span>
+        </a>
+        <a href="../meteorologia/meteorologia.html" class="nav-item" style="--i:9">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+          </svg>
+          <span>Meteorologia</span>
+        </a>
+        <a href="../contatos_de_emergência/emergencia.html" class="nav-item" style="--i:10">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.72 19.79 19.79 0 01.75 1.1 2 2 0 012.73.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.02 6.02l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <span>Contatos</span>
+        </a>
+        <a href="../config_da_conta/index.html" class="nav-item" style="--i:11">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Conta</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="user-avatar">JP</div>
+          <span class="user-name">João Pedro</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1>Reportar Ocorrência</h1>
+        <div class="topbar-actions">
+          <button class="alert-bell" aria-label="Alertas" data-count="2">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+          </button>
+          <div class="top-avatar">JP</div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="report-container">
+          <div class="card report-card">
+            <div class="card-header-actions">
+              <h2 id="formTitle">Detalhes da Ocorrência</h2>
+              <div class="actions">
+                <button class="btn-icon btn-edit" type="button" title="Editar">
+                  <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                </button>
+                <button class="btn-icon btn-delete" type="button" title="Deletar">
+                  <svg viewBox="0 0 24 24" stroke-width="1.8"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
+                </button>
+              </div>
+            </div>
+            <form id="reportForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Tipo de Ocorrência *</label>
+                  <select name="tipo" id="tipo" required>
+                    <option value="">Selecione...</option>
+                    <option value="Incêndio em Mata">Incêndio em Mata</option>
+                    <option value="Foco de Calor">Foco de Calor</option>
+                    <option value="Queimada Controlada">Queimada Controlada</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Severidade</label>
+                  <select name="severidade" id="severidade" class="select-high">
+                    <option value="alta">Alta (Crítico)</option>
+                    <option value="media">Média</option>
+                    <option value="baixa">Baixa</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Descrição</label>
+                <textarea name="descricao" id="descricao" placeholder="Descreva o local e a situação..."></textarea>
+              </div>
+
+              <label>Localização (Clique no mapa ou use GPS)</label>
+              <div id="map" style="height: 300px; border-radius: 12px; margin-bottom: 12px; border: 1px solid var(--line);"></div>
+              <div class="gps-box">
+                <button type="button" class="btn-gps" onclick="pegarGPS()">
+                  <svg viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
+                  Usar minha localização atual
+                </button>
+                <div class="coords">
+                  <input type="text" name="lat" id="lat" readonly placeholder="Latitude">
+                  <input type="text" name="lng" id="lng" readonly placeholder="Longitude">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Anexar Fotos</label>
+                <div class="upload-zone" onclick="document.getElementById('fotoInput').click()" id="dropZone">
+                  <input type="file" id="fotoInput" hidden accept="image/*" multiple>
+                  <span id="uploadText">Anexar Imagens</span>
+                  <div id="previewContainer" class="preview-container"></div>
+                </div>
+              </div>
+
+              <button type="submit" id="btnSubmit" class="btn-submit">Enviar Relatório</button>
+            </form>
+          </div>
+
+          <aside class="recent-reports">
+            <div class="card">
+              <h3>Minhas Ocorrências</h3>
+              <div class="report-list" id="reportList">
+                
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modalTitle">Detalhes da Ocorrência</h2>
+        <button class="btn-close" onclick="fecharModal()">×</button>
+      </div>
+      <div class="modal-body" id="modalContent">
+        
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="fecharModal()">Fechar</button>
+        <button class="btn-edit-modal" id="btnEditModal">Editar Registro</button>
+        <button class="btn-delete-modal" id="btnDeleteModal">Excluir</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="../../assets/js/login.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--mx', '50%');
+        card.style.setProperty('--my', '50%');
+      });
+    });
+  </script>
+</body>
+</html>

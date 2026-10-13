@@ -1,0 +1,36 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Flamer - Sistema inteligente para monitoramento e prevenção de queimadas
+authors:
+  - family-names: Teixeira Reis
+    given-names: João Pedro
+  - family-names: Calazans dos Reis
+    given-names: Bruno
+  - family-names: de Magalhães Tavares Camilo
+    given-names: Pedro José
+  - family-names: Lage da Costa
+    given-names: Rodrigo
+  - family-names: Rodrigues Rezende
+    given-names: Cairo
+  - family-names: Silva Pinto
+    given-names: Ruan Pablo
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: da Costa Silva
+    given-names: Luiz Henrique
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: de Quadros Maia Filho
+    given-names: Danilo
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Silva Tavares
+    given-names: Cleiton
+keywords:
+  - queimadas
+  - prevenção de incêndios
+  - monitoramento ambiental
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti1-7641100-flamer
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-07-08

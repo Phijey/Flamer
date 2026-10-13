@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuração de Conta — Flamer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css">
+</head>
+<body>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+            <path d="M12 8c-1.5 2.5-3 4.5-3 6.5a3 3 0 006 0C15 12.5 13.5 10.5 12 8z" fill="#FDE68A"/>
+          </svg>
+        </div>
+        <span class="brand-name">Flamer</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="../../index.html" class="nav-item" style="--i:0">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+            <path d="M9 21V12h6v9"/>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="../dashboard/index.html" class="nav-item" style="--i:1">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="../focos_ativos/index.html" class="nav-item" style="--i:2">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          <span>Focos Ativos</span>
+        </a>
+        <a href="../reportar_ocorrencia/index.html" class="nav-item" style="--i:3">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/>
+            <path d="M14 17h6M17 14v6"/>
+          </svg>
+          <span>Reportar</span>
+        </a>
+        <a href="../qualidade_ar/index.html" class="nav-item" style="--i:4">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+            <circle cx="7" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>Qualidade do Ar</span>
+        </a>
+        <a href="../minha_propriedade/index.html" class="nav-item" style="--i:5">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+          <span>Minha Propriedade</span>
+        </a>
+        <a href="../relatorios/index.html" class="nav-item" style="--i:6">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M9 17H7a4 4 0 010-8h2"/>
+            <path d="M15 7h2a4 4 0 010 8h-2"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+          <span>Relatórios</span>
+        </a>
+        <a href="../historico_queimadas/index.html" class="nav-item" style="--i:7">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>Histórico</span>
+        </a>
+        <a href="../alertas/index.html" class="nav-item" style="--i:8">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+          <span>Alertas</span>
+        </a>
+        <a href="../meteorologia/meteorologia.html" class="nav-item" style="--i:9">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+          </svg>
+          <span>Meteorologia</span>
+        </a>
+        <a href="../contatos_de_emergência/emergencia.html" class="nav-item" style="--i:10">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.72 19.79 19.79 0 01.75 1.1 2 2 0 012.73.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.02 6.02l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <span>Contatos</span>
+        </a>
+        <a href="../config_da_conta/index.html" class="nav-item active" style="--i:11">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Conta</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+
+        <div class="sidebar-user">
+        <div class="user-avatar">JP</div>
+        <span class="user-name">João Pedro</span>
+      </div>
+
+      </div></aside>
+    <div class="main-area">
+
+      <header class="topbar">
+        <h1 class="page-title">Configuração de Conta</h1>
+        <div class="topbar-controls">
+          <div class="topbar-chip">Fazenda São Bento</div>
+          <button class="topbar-bell" aria-label="Alertas">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+            <span class="bell-badge">3</span>
+          </button>
+          <div class="topbar-avatar">JP</div>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <div class="config-grid">
+          <div class="config-main">
+            
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                </div>
+                <span class="card-title">Informações Pessoais</span>
+              </div>
+              
+              <div class="profile-section">
+                <div class="avatar-box">
+                  <div class="profile-avatar">JP</div>
+                  <button class="btn-avatar">Alterar foto</button>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">CPF</label>
+                  <div class="form-hint">✓ Conta verificada - Predador Rural · CPF registrado</div>
+                </div>
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="form-group">
+                  <label class="form-label">Nome completo</label>
+                  <input type="text" class="form-input" value="João Pedro Oliveira" placeholder="" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">CPF</label>
+                  <input type="text" class="form-input" value="***-***.***-**" placeholder="" disabled />
+                </div>
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="form-group">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-input" value="joao@fazendaracento.com.br" placeholder="" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Telefone / Whatsapp</label>
+                  <input type="tel" class="form-input" value="+55 65 99999-0001" placeholder="" />
+                </div>
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="form-group">
+                  <label class="form-label">Estado</label>
+                  <input type="text" class="form-input" value="Mato Grosso – MT" placeholder="" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Município</label>
+                  <input type="text" class="form-input" value="Cuiabá" placeholder="" />
+                </div>
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="form-group">
+                  <label class="form-label">CAR (Cadastro Ambiental Rural)</label>
+                  <input type="text" class="form-input" value="MT-5103303-XXXXX" placeholder="" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Tipo de perfil</label>
+                  <input type="text" class="form-input" value="Predador Rural" placeholder="" disabled />
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5.5 3.6 10.7 8 12 4.4-1.3 8-6.5 8-12V6l-8-4z" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+                </div>
+                <span class="card-title">Segurança</span>
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="form-group">
+                  <label class="form-label">Senha atual</label>
+                  <input type="password" class="form-input" placeholder="••••••••" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Nova senha</label>
+                  <input type="password" class="form-input" placeholder="••••••••" />
+                </div>
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="form-group">
+                  <label class="form-label">Confirmar nova senha</label>
+                  <input type="password" class="form-input" placeholder="••••••••" />
+                </div>
+              </div>
+            </div>
+
+            <!-- PREFERÊNCIAS DE ALERTA -->
+            <div class="glass-card" id="preferencias-alerta">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                </div>
+                <span class="card-title">Preferências de Alerta</span>
+              </div>
+
+              <div class="pref-grid">
+                <div class="pref-item">
+                  <div class="pref-text">
+                    <div class="pref-label">Alertas por email</div>
+                    <div class="pref-desc">Focos detectados próximos à sua propriedade</div>
+                  </div>
+                  <div class="toggle-switch active" data-pref-key="flamer_pref_email" data-default="true">
+                    <div class="toggle-thumb"></div>
+                  </div>
+                </div>
+
+                <div class="pref-item">
+                  <div class="pref-text">
+                    <div class="pref-label">Resumo diário</div>
+                    <div class="pref-desc">Relatório às 7h com dados do dia anterior</div>
+                  </div>
+                  <div class="toggle-switch active" data-pref-key="flamer_pref_resumo_diario" data-default="true">
+                    <div class="toggle-thumb"></div>
+                  </div>
+                </div>
+
+                <div class="pref-item">
+                  <div class="pref-text">
+                    <div class="pref-label">Alertas de vizinhos</div>
+                    <div class="pref-desc">Focos em raio de 50 km da fazenda</div>
+                  </div>
+                  <div class="toggle-switch" data-pref-key="flamer_pref_vizinhos" data-default="false">
+                    <div class="toggle-thumb"></div>
+                  </div>
+                </div>
+
+                <div class="pref-item">
+                  <div class="pref-text">
+                    <div class="pref-label">Alertas por SMS</div>
+                    <div class="pref-desc">Notificações críticas via WhatsApp/SMS</div>
+                  </div>
+                  <div class="toggle-switch active" data-pref-key="flamer_pref_sms" data-default="true">
+                    <div class="toggle-thumb"></div>
+                  </div>
+                </div>
+
+                <div class="pref-item">
+                  <div class="pref-text">
+                    <div class="pref-label">Boletim semanal</div>
+                    <div class="pref-desc">Consolidado toda segunda-feira</div>
+                  </div>
+                  <div class="toggle-switch active" data-pref-key="flamer_pref_boletim" data-default="true">
+                    <div class="toggle-thumb"></div>
+                  </div>
+                </div>
+
+                <div class="pref-item">
+                  <div class="pref-text">
+                    <div class="pref-label">Relatórios automáticos</div>
+                    <div class="pref-desc">Envio mensal ao IBAMA e órgãos ambientais</div>
+                  </div>
+                  <div class="toggle-switch" data-pref-key="flamer_pref_relatorios" data-default="false">
+                    <div class="toggle-thumb"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="config-actions">
+          <button class="btn btn-primary" id="btnSalvar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/>
+              <polyline points="17 21 17 13 7 13 7 21"/>
+              <polyline points="7 3 7 8 15 8"/>
+            </svg>
+            Salvar Alterações
+          </button>
+          <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/login.js"></script>
+  <script>
+    const API = 'http://localhost:3001';
+    let configAtual = null;
+
+    function initSpotlight() {
+      document.querySelectorAll('.glass-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+          card.style.setProperty('--my', (e.clientY - r.top)  + 'px');
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.setProperty('--mx', '50%');
+          card.style.setProperty('--my', '50%');
+        });
+      });
+    }
+
+    // ── TOGGLE SWITCHES ──────────────────────────────────────
+
+    function getPrefToggles() {
+      return document.querySelectorAll('[data-pref-key]');
+    }
+
+    function loadPrefsFromStorage() {
+      getPrefToggles().forEach(toggle => {
+        const key = toggle.dataset.prefKey;
+        const saved = localStorage.getItem(key);
+        const active = saved !== null ? saved === 'true' : toggle.dataset.default === 'true';
+        toggle.classList.toggle('active', active);
+      });
+    }
+
+    function savePrefsToStorage() {
+      getPrefToggles().forEach(toggle => {
+        localStorage.setItem(toggle.dataset.prefKey, toggle.classList.contains('active'));
+      });
+    }
+
+    function initToggles() {
+      loadPrefsFromStorage();
+
+      getPrefToggles().forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          toggle.classList.toggle('active');
+        });
+      });
+
+      window.addEventListener('storage', e => {
+        if (!e.key || !e.key.startsWith('flamer_pref_')) return;
+        getPrefToggles().forEach(toggle => {
+          if (toggle.dataset.prefKey === e.key) {
+            toggle.classList.toggle('active', e.newValue === 'true');
+          }
+        });
+      });
+    }
+
+    async function carregarConfiguracao() {
+      try {
+        const uid = (typeof usuarioCorrente !== 'undefined' && usuarioCorrente?.id) ? usuarioCorrente.id : 2;
+        const res = await fetch(`${API}/config_conta?usuarioId=${uid}`);
+        const configs = await res.json();
+        if (configs.length > 0) {
+          configAtual = configs[0];
+          preencherFormulario(configAtual);
+        }
+      } catch (err) {
+        console.warn('Erro ao carregar configuração:', err);
+      }
+    }
+
+    function preencherFormulario(config) {
+      document.querySelector('input[placeholder=""]').value = config.nomeCompleto || '';
+      const cpfInput = document.querySelector('input[type="text"][value="***-***.***-**"]');
+      if (cpfInput) cpfInput.value = config.cpf || '';
+
+      const emailInput = document.querySelector('input[type="email"]');
+      if (emailInput) emailInput.value = config.email || '';
+
+      const telInput = document.querySelector('input[type="tel"]');
+      if (telInput) telInput.value = config.telefone || '';
+
+      const estadoInputs = document.querySelectorAll('input[type="text"]');
+      if (estadoInputs.length > 2) {
+        estadoInputs[2].value = config.estado ? `${config.estado} – MT` : '';
+      }
+      if (estadoInputs.length > 3) {
+        estadoInputs[3].value = config.municipio || '';
+      }
+      if (estadoInputs.length > 4) {
+        estadoInputs[4].value = config.car || '';
+      }
+
+      const toggleSwitches = document.querySelectorAll('.toggle-switch');
+      if (toggleSwitches.length >= 1) toggleSwitches[0].classList.toggle('active', config.alertasEmail);
+      if (toggleSwitches.length >= 2) toggleSwitches[1].classList.toggle('active', config.resumoDiario);
+      if (toggleSwitches.length >= 3) toggleSwitches[2].classList.toggle('active', config.alertasVizinhos);
+      if (toggleSwitches.length >= 4) toggleSwitches[3].classList.toggle('active', config.alertasSMS);
+      if (toggleSwitches.length >= 5) toggleSwitches[4].classList.toggle('active', config.boletimSemanal);
+      if (toggleSwitches.length >= 6) toggleSwitches[5].classList.toggle('active', config.relatoriosAutomaticos);
+      savePrefsToStorage();
+    }
+
+    async function salvarConfiguracao() {
+      const nomeCompleto = document.querySelectorAll('input[type="text"]')[0].value;
+      const email = document.querySelector('input[type="email"]').value;
+      const telefone = document.querySelector('input[type="tel"]').value;
+      const estado = document.querySelectorAll('input[type="text"]')[2].value.split(' – ')[0];
+      const municipio = document.querySelectorAll('input[type="text"]')[3].value;
+      const car = document.querySelectorAll('input[type="text"]')[4].value;
+
+      const toggleSwitches = document.querySelectorAll('.toggle-switch');
+      const config = {
+        usuarioId: (typeof usuarioCorrente !== 'undefined' && usuarioCorrente?.id) ? usuarioCorrente.id : 2,
+        nomeCompleto,
+        cpf: configAtual?.cpf || '123.456.789-00',
+        email,
+        telefone,
+        estado,
+        municipio,
+        car,
+        tipoPerfil: 'Predador Rural',
+        alertasEmail: toggleSwitches[0]?.classList.contains('active') || false,
+        resumoDiario: toggleSwitches[1]?.classList.contains('active') || false,
+        alertasVizinhos: toggleSwitches[2]?.classList.contains('active') || false,
+        alertasSMS: toggleSwitches[3]?.classList.contains('active') || false,
+        boletimSemanal: toggleSwitches[4]?.classList.contains('active') || false,
+        relatoriosAutomaticos: toggleSwitches[5]?.classList.contains('active') || false,
+        dataAtualizacao: new Date().toISOString().split('T')[0]
+      };
+
+      try {
+        if (configAtual?.id) {
+          await fetch(`${API}/config_conta/${configAtual.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(config)
+          });
+        } else {
+          await fetch(`${API}/config_conta`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ...config, dataCriacao: new Date().toISOString().split('T')[0] })
+          });
+        }
+        savePrefsToStorage();
+        const btn = document.getElementById('btnSalvar');
+        if (btn) {
+          const original = btn.innerHTML;
+          btn.innerHTML = btn.innerHTML.replace('Salvar Alterações', 'Salvo!');
+          setTimeout(() => { btn.innerHTML = original; }, 2000);
+        }
+        carregarConfiguracao();
+      } catch (err) {
+        console.error('Erro ao salvar:', err);
+        alert('Erro ao salvar configurações');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initSpotlight();
+      initToggles();
+      carregarConfiguracao();
+
+      document.getElementById('btnSalvar').addEventListener('click', salvarConfiguracao);
+      document.getElementById('btnCancelar').addEventListener('click', carregarConfiguracao);
+
+      if (window.location.hash === '#preferencias-alerta') {
+        const el = document.getElementById('preferencias-alerta');
+        if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+      }
+    });
+  </script>
+
+</body>
+</html>

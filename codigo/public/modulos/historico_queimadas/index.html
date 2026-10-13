@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico de Queimadas — Flamer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css">
+</head>
+<body>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+            <path d="M12 8c-1.5 2.5-3 4.5-3 6.5a3 3 0 006 0C15 12.5 13.5 10.5 12 8z" fill="#FDE68A"/>
+          </svg>
+        </div>
+        <span class="brand-name">Flamer</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="../../index.html" class="nav-item" style="--i:0">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+            <path d="M9 21V12h6v9"/>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="../dashboard/index.html" class="nav-item" style="--i:1">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="../focos_ativos/index.html" class="nav-item" style="--i:2">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          <span>Focos Ativos</span>
+        </a>
+        <a href="../reportar_ocorrencia/index.html" class="nav-item" style="--i:3">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/>
+            <path d="M14 17h6M17 14v6"/>
+          </svg>
+          <span>Reportar</span>
+        </a>
+        <a href="../qualidade_ar/index.html" class="nav-item" style="--i:4">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+            <circle cx="7" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>Qualidade do Ar</span>
+        </a>
+        <a href="../minha_propriedade/index.html" class="nav-item" style="--i:5">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+          <span>Minha Propriedade</span>
+        </a>
+        <a href="../relatorios/index.html" class="nav-item" style="--i:6">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M9 17H7a4 4 0 010-8h2"/>
+            <path d="M15 7h2a4 4 0 010 8h-2"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+          <span>Relatórios</span>
+        </a>
+        <a href="../historico_queimadas/index.html" class="nav-item active" style="--i:7">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>Histórico</span>
+        </a>
+        <a href="../alertas/index.html" class="nav-item" style="--i:8">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+          <span>Alertas</span>
+        </a>
+        <a href="../meteorologia/meteorologia.html" class="nav-item" style="--i:9">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+          </svg>
+          <span>Meteorologia</span>
+        </a>
+        <a href="../contatos_de_emergência/emergencia.html" class="nav-item" style="--i:10">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.72 19.79 19.79 0 01.75 1.1 2 2 0 012.73.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.02 6.02l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <span>Contatos</span>
+        </a>
+        <a href="../config_da_conta/index.html" class="nav-item" style="--i:11">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Conta</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+
+        <div class="sidebar-user">
+        <div class="user-avatar">JP</div>
+        <span class="user-name">João Pedro</span>
+      </div>
+
+      </div></aside>
+    <div class="main-area">
+
+      <header class="topbar">
+        <h1 class="page-title">Histórico de Queimadas</h1>
+        <div class="topbar-controls">
+          <div class="topbar-chip topbar-chip--active">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            2026
+          </div>
+          <div class="topbar-chip">Faz. São Bento</div>
+          <div class="topbar-chip topbar-chip--wide">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+            </svg>
+            Fazenda São Bento
+          </div>
+          <button class="topbar-bell" aria-label="Alertas">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+            <span class="bell-badge">3</span>
+          </button>
+          <div class="topbar-avatar">JP</div>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <div class="hist-grid">
+          <div class="hist-main">
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <span class="card-title">Mapa de Calor — Incidência por Dia (2026)</span>
+              </div>
+              <div class="heatmap-scroll">
+                <div id="hm-months" class="hm-months"></div>
+                <div id="hm-grid" class="hm-grid"></div>
+              </div>
+              <div class="hm-legend">
+                <span class="hm-leg-label">Menor</span>
+                <div class="hm-leg-cells">
+                  <div class="hm-leg-cell" style="background:var(--heat-0)"></div>
+                  <div class="hm-leg-cell" style="background:var(--heat-1)"></div>
+                  <div class="hm-leg-cell" style="background:var(--heat-2)"></div>
+                  <div class="hm-leg-cell" style="background:var(--heat-3)"></div>
+                  <div class="hm-leg-cell" style="background:var(--heat-4)"></div>
+                </div>
+                <span class="hm-leg-label">Maior incidência</span>
+              </div>
+            </div>
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <span class="card-title">Linha do Tempo</span>
+              </div>
+              <div id="timeline" class="tl-list"></div>
+            </div>
+
+          </div>
+          <div class="hist-aside">
+
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <span class="card-title">Resumo Anual</span>
+              </div>
+              <div class="sum-kpis">
+                <div class="sum-kpi">
+                  <div id="kpi-focos" class="sum-kpi-value">—</div>
+                  <div class="sum-kpi-label">Focos</div>
+                </div>
+                <div class="sum-kpi">
+                  <div id="kpi-hectares" class="sum-kpi-value">—</div>
+                  <div class="sum-kpi-label">ha queimados</div>
+                </div>
+                <div class="sum-kpi">
+                  <div id="kpi-mes" class="sum-kpi-value sum-kpi-value--hi">—</div>
+                  <div class="sum-kpi-label">Mês crítico</div>
+                </div>
+              </div>
+
+              <div class="sum-divider"></div>
+              <div id="summary" class="sum-list"></div>
+            </div>
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <span class="card-title">Focos / Mês</span>
+              </div>
+              <div class="chart-wrap">
+                <div id="chart" class="chart-area"></div>
+                <div id="chart-labels" class="chart-labels"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/login.js"></script>
+  <script>
+    const API = 'http://localhost:3001';
+    const MONTHS_ABBR = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+    const MONTHS_FULL = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+
+    function parseData(str) {
+      if (!str) return null;
+      if (/^\d{4}-\d{2}-\d{2}/.test(str)) return new Date(str.substring(0, 10) + 'T00:00:00');
+      const m = str.match(/^(\d{2})\/(\d{2})\/(\d{4})/);
+      if (m) return new Date(`${m[3]}-${m[2]}-${m[1]}T00:00:00`);
+      return null;
+    }
+
+    function buildHeatmap(ocorrencias) {
+      const fireData = {};
+      const ano = 2026;
+
+      ocorrencias.forEach(o => {
+        const d = parseData(o.data);
+        if (!d || d.getFullYear() !== ano) return;
+        const key = `${ano}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        fireData[key] = (fireData[key] || 0) + 1;
+      });
+
+      const padding = 3;
+      const cells = [];
+      const monthStartWeeks = {};
+
+      for (let i = 0; i < padding; i++) cells.push(null);
+
+      for (let m = 0; m < 12; m++) {
+        const days = new Date(ano, m + 1, 0).getDate();
+        for (let d = 1; d <= days; d++) {
+          if (d === 1) monthStartWeeks[m] = Math.floor(cells.length / 7);
+          const key = `${ano}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+          const count = fireData[key] || 0;
+          const level = count === 0 ? 0 : count === 1 ? 1 : count === 2 ? 2 : count <= 4 ? 3 : 4;
+          cells.push({ key, level, m, d, focos: count });
+        }
+      }
+
+      while (cells.length % 7) cells.push(null);
+
+      const numWeeks = cells.length / 7;
+      const CELL = 13, GAP = 2.5;
+
+      const monthBar = document.getElementById('hm-months');
+      monthBar.innerHTML = '';
+      monthBar.style.gridTemplateColumns = `repeat(${numWeeks}, ${CELL}px)`;
+      monthBar.style.gap = `${GAP}px`;
+
+      MONTHS_FULL.forEach((name, mi) => {
+        const wk = monthStartWeeks[mi];
+        if (wk === undefined) return;
+        const span = document.createElement('span');
+        span.textContent = name;
+        span.style.gridColumn = wk + 1;
+        monthBar.appendChild(span);
+      });
+
+      const grid = document.getElementById('hm-grid');
+      grid.innerHTML = '';
+      grid.style.gridTemplateColumns = `repeat(${numWeeks}, ${CELL}px)`;
+      grid.style.gap = `${GAP}px`;
+
+      cells.forEach(cell => {
+        const div = document.createElement('div');
+        if (!cell) {
+          div.className = 'hm-cell empty';
+        } else {
+          div.className = `hm-cell l${cell.level}`;
+          div.title = cell.level === 0
+            ? `${cell.key}: Sem ocorrências`
+            : `${cell.key}: ${cell.focos} ocorrência(s)`;
+        }
+        grid.appendChild(div);
+      });
+    }
+
+    function buildTimeline(ocorrencias) {
+      const ICONS = {
+        critical:     `<svg width="12" height="12" viewBox="0 0 24 24" fill="#EF4444"><path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/></svg>`,
+        controlled:   `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>`,
+        alert:        `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg>`,
+        extinguished: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`,
+        detected:     `<svg width="12" height="12" viewBox="0 0 24 24" fill="#F97316" opacity="0.8"><path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/></svg>`,
+        inspection:   `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`,
+      };
+
+      const STATUS_MAP = {
+        'ativo':       { type: 'critical',     badge: 'Ativo'      },
+        'em análise':  { type: 'alert',        badge: 'Em Análise' },
+        'resolvido':   { type: 'controlled',   badge: 'Resolvido'  },
+        'extinto':     { type: 'extinguished', badge: 'Extinto'    },
+        'controlado':  { type: 'controlled',   badge: 'Controlado' },
+        'alta':        { type: 'critical',     badge: 'Alta'       },
+        'media':       { type: 'alert',        badge: 'Média'      },
+        'baixa':       { type: 'inspection',   badge: 'Baixa'      },
+      };
+
+      const container = document.getElementById('timeline');
+      container.innerHTML = '';
+
+      const sorted = [...ocorrencias].sort((a, b) => {
+        const da = parseData(a.data) || new Date(0);
+        const db = parseData(b.data) || new Date(0);
+        return db - da;
+      });
+
+      sorted.forEach((oc, i) => {
+        const statusKey = (oc.status || oc.severidade || '').toLowerCase();
+        const map = STATUS_MAP[statusKey] || { type: 'detected', badge: oc.status || oc.severidade || 'Detectado' };
+        const d = parseData(oc.data);
+        const dataFmt = d ? d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }) : (oc.data || '—');
+        const isCritical = map.type === 'critical';
+
+        const item = document.createElement('div');
+        item.className = 'tl-item';
+        item.style.setProperty('--i', i);
+        item.innerHTML = `
+          <div class="tl-dot tl-dot--${map.type}">${ICONS[map.type] || ''}</div>
+          <div class="tl-body">
+            <div class="tl-card ${isCritical ? 'tl-card--critical' : ''}">
+              <div class="tl-content">
+                <div class="tl-top">
+                  <div class="tl-title ${isCritical ? 'tl-title--critical' : ''}">${oc.tipo} #${oc.id}</div>
+                  <span class="tl-badge tl-badge--${map.type}">${map.badge}</span>
+                </div>
+                <div class="tl-sub">${oc.descricao}</div>
+              </div>
+              <div class="tl-meta">
+                <div class="tl-date">${dataFmt}</div>
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    // ── SUMMARY ──────────────────────────────────────────────
+
+    function buildSummary(historico) {
+      const totalFocos     = historico.reduce((s, h) => s + h.focos, 0);
+      const totalHectares  = historico.reduce((s, h) => s + h.areaHectares, 0);
+      const mesCritico     = historico.reduce((best, h) => h.focos > (best ? best.focos : -1) ? h : best, null);
+      const mesCriticoNome = mesCritico ? MONTHS_FULL[mesCritico.mes - 1] : '—';
+
+      document.getElementById('kpi-focos').textContent    = totalFocos;
+      document.getElementById('kpi-hectares').textContent = totalHectares >= 1000 ? (totalHectares/1000).toFixed(1)+'k' : totalHectares;
+      document.getElementById('kpi-mes').textContent      = mesCriticoNome;
+
+      const ROWS = [
+        { label: 'Total de focos registrados', value: totalFocos },
+        { label: 'Área total queimada',         value: totalHectares + ' ha' },
+        { label: 'Municípios afetados',          value: new Set(historico.map(h => h.cidade)).size },
+      ];
+
+      const container = document.getElementById('summary');
+      container.innerHTML = '';
+      ROWS.forEach(row => {
+        const div = document.createElement('div');
+        div.className = 'sum-row';
+        div.innerHTML = `<span class="sum-label">${row.label}</span><span class="sum-value">${row.value}</span>`;
+        container.appendChild(div);
+      });
+    }
+
+    // ── CHART ────────────────────────────────────────────────
+
+    function buildChart(historico) {
+      const monthly = Array(12).fill(0);
+      historico.forEach(h => { monthly[h.mes - 1] += h.focos; });
+
+      const max = Math.max(...monthly) || 1;
+      const chartArea   = document.getElementById('chart');
+      const chartLabels = document.getElementById('chart-labels');
+      chartArea.innerHTML = '';
+      chartLabels.innerHTML = '';
+
+      monthly.forEach((v, i) => {
+        const pct    = (v / max) * 100;
+        const isPeak = v === max && v > 0;
+
+        const col = document.createElement('div');
+        col.className = 'chart-col';
+        col.style.setProperty('--bi', i);
+        col.innerHTML = `
+          <div class="chart-bar-wrap" data-value="${v}">
+            <div class="chart-bar ${isPeak ? 'chart-bar--peak' : ''}" style="height:${Math.max(pct, v > 0 ? 2 : 0)}%"></div>
+          </div>
+        `;
+        chartArea.appendChild(col);
+
+        const lbl = document.createElement('span');
+        lbl.className = `chart-month${isPeak ? ' chart-month--peak' : ''}`;
+        lbl.textContent = MONTHS_ABBR[i];
+        chartLabels.appendChild(lbl);
+      });
+    }
+
+    // ── SPOTLIGHT (glass card mouse tracking) ─────────────────
+
+    function initSpotlight() {
+      document.querySelectorAll('.glass-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const r = card.getBoundingClientRect();
+          card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+          card.style.setProperty('--my', (e.clientY - r.top)  + 'px');
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.setProperty('--mx', '50%');
+          card.style.setProperty('--my', '50%');
+        });
+      });
+    }
+
+    // ── INIT ─────────────────────────────────────────────────
+
+    async function init() {
+      try {
+        const [historicoRes, ocorrenciasRes] = await Promise.all([
+          fetch(`${API}/historico_queimadas`),
+          fetch(`${API}/ocorrencias`),
+        ]);
+
+        const historico   = await historicoRes.json();
+        const ocorrencias = await ocorrenciasRes.json();
+
+        buildHeatmap(ocorrencias || []);
+
+        if (historico && historico.length > 0) {
+          buildSummary(historico);
+          buildChart(historico);
+        }
+
+        if (ocorrencias && ocorrencias.length > 0) {
+          buildTimeline(ocorrencias);
+        }
+      } catch (err) {
+        console.warn('JSON Server indisponível, usando dados de fallback.', err);
+        const fallbackHistorico = [];
+        for (let mes = 1; mes <= 8; mes++) {
+          fallbackHistorico.push({ ano: 2026, mes, focos: Math.floor(Math.random() * 20) + 5, areaHectares: Math.floor(Math.random() * 500) + 50, cidade: 'Uberlândia', estado: 'MG' });
+        }
+        buildHeatmap([]);
+        buildTimeline([]);
+        buildSummary(fallbackHistorico);
+        buildChart(fallbackHistorico);
+      }
+      initSpotlight();
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+
+</body>
+</html>

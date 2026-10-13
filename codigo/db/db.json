@@ -1,0 +1,812 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "email": "admin@gmail.com",
+      "senha": "123456",
+      "tipo": "admin"
+    },
+    {
+      "id": "2",
+      "nome": "Bruno Calazans",
+      "email": "brunocalazansreis@gmail.com",
+      "senha": "123456",
+      "tipo": "usuario"
+    },
+    {
+      "id": "3",
+      "nome": "Maria Souza",
+      "email": "maria@gmail.com",
+      "senha": "123456",
+      "tipo": "usuario"
+    }
+  ],
+  "locais": [
+    {
+      "id": "1",
+      "nome": "Fazenda do Bruno",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "lat": -18.9186,
+      "lng": -48.2772,
+      "tamanho": "450 hectares",
+      "risco": "alto",
+      "usuarioId": 2
+    },
+    {
+      "id": "2",
+      "nome": "Sítio da Maria",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "lat": -16.7354,
+      "lng": -43.8647,
+      "tamanho": "120 hectares",
+      "risco": "medio",
+      "usuarioId": 3
+    },
+    {
+      "id": "3",
+      "nome": "Parque Serra do Cipó",
+      "cidade": "Santana do Riacho",
+      "estado": "MG",
+      "lat": -19.3667,
+      "lng": -43.5833,
+      "tamanho": "grande",
+      "risco": "alto",
+      "usuarioId": 1
+    }
+  ],
+  "ocorrencias": [
+    {
+      "id": "1",
+      "tipo": "Incêndio",
+      "descricao": "Fogo na borda da fazenda perto do rio",
+      "localId": 1,
+      "usuarioId": 2,
+      "data": "2026-05-17",
+      "status": "resolvido"
+    },
+    {
+      "id": "2",
+      "tipo": "Fumaça",
+      "descricao": "Fumaça suspeita no lado sul do sítio",
+      "localId": 2,
+      "usuarioId": 3,
+      "data": "2026-05-21",
+      "status": "em análise"
+    },
+    {
+      "id": "3",
+      "tipo": "Incêndio",
+      "descricao": "Incêndio grande no parque, bombeiros foram acionados",
+      "localId": 3,
+      "usuarioId": 1,
+      "data": "2026-05-23",
+      "status": "ativo"
+    },
+    {
+      "tipo": "Foco de Calor",
+      "severidade": "alta",
+      "descricao": "Funcionando",
+      "lat": "-19.919534",
+      "lng": "-43.944969",
+      "usuario": "JP",
+      "imagens": [],
+      "id": "5pKIXmrWSsE",
+      "data": "27/05/2026, 17:37:00"
+    },
+    {
+      "id": "4",
+      "tipo": "Incêndio",
+      "descricao": "Incêndio controlado em região de preservação",
+      "localId": 1,
+      "usuarioId": 2,
+      "data": "2026-04-10",
+      "status": "extinto"
+    },
+    {
+      "id": "5",
+      "tipo": "Foco de Calor",
+      "descricao": "Foco detectado nas coordenadas da fazenda",
+      "localId": 2,
+      "usuarioId": 3,
+      "data": "2026-03-15",
+      "status": "controlado"
+    },
+    {
+      "id": "6",
+      "tipo": "Incêndio",
+      "descricao": "Grande incêndio que afetou área de mata",
+      "localId": 3,
+      "usuarioId": 1,
+      "data": "2026-02-20",
+      "status": "resolvido"
+    },
+    {
+      "id": "7",
+      "tipo": "Fumaça",
+      "descricao": "Fumaça suspeita detectada por vizinhos",
+      "localId": 1,
+      "usuarioId": 2,
+      "data": "2026-06-01",
+      "status": "em análise"
+    },
+    {
+      "id": "8",
+      "tipo": "Incêndio",
+      "descricao": "Queimada controlada de pastos",
+      "localId": 2,
+      "usuarioId": 3,
+      "data": "2026-05-30",
+      "status": "resolvido"
+    },
+    {
+      "tipo": "Incêndio em Mata",
+      "severidade": "alta",
+      "descricao": "Foco na rua tal",
+      "lat": "-19.943279",
+      "lng": "-43.949659",
+      "usuario": "JP",
+      "imagens": [],
+      "id": "VWOX9WU5bbQ",
+      "data": "27/05/2026, 17:42:45",
+      "atualizadoEm": "03/06/2026, 18:17:11"
+    },
+    {
+      "tipo": "Incêndio em Mata",
+      "severidade": "alta",
+      "descricao": "sfdsdf",
+      "lat": "-19.916871",
+      "lng": "-43.949604",
+      "usuario": "JP",
+      "imagens": [],
+      "id": "1780518599866",
+      "data": "2026-06-03"
+    },
+    {
+      "tipo": "Incêndio em Mata",
+      "severidade": "alta",
+      "descricao": "jtrt",
+      "lat": "-19.907833",
+      "lng": "-43.947029",
+      "usuario": "JP",
+      "imagens": [],
+      "id": 1780521454980,
+      "data": "2026-06-03"
+    }
+  ],
+  "alertas": [
+    {
+      "id": "F-0234",
+      "categoria": "foco",
+      "tipo": "critical",
+      "titulo": "Foco Crítico",
+      "descricao": "Foco F-0234 detectado a 2.3 km da Fazenda São Bento. Vento favorecendo propagação.",
+      "severidade": "Crítico",
+      "horario": "2026-05-21T14:12:00",
+      "lido": false,
+      "origem": "Focos Ativos",
+      "detalhe": {
+        "localizacao": "Setor Norte - 2.3 km da sede",
+        "acaoRecomendada": "Acione a brigada e isole o perimetro do Setor Norte.",
+        "dadosTecnicos": {
+          "vento": "22 km/h NE",
+          "satelite": "GOES-16",
+          "confianca": "94%"
+        }
+      }
+    },
+    {
+      "id": "F-0235",
+      "categoria": "foco",
+      "tipo": "critical",
+      "titulo": "Foco Crítico Local",
+      "descricao": "Foco F-0235 detectado a 1.4 km da Fazenda São Bento. Vento favorecendo propagação.",
+      "severidade": "Crítico",
+      "horario": "2026-05-21T14:12:00",
+      "lido": false,
+      "origem": "Focos Ativos",
+      "detalhe": {
+        "localizacao": "Setor Norte - 2.3 km da sede",
+        "acaoRecomendada": "Acione a brigada e isole o perimetro do Setor Norte.",
+        "dadosTecnicos": {
+          "vento": "21 km/h NE",
+          "satelite": "GOES-16",
+          "confianca": "94%"
+        }
+      }
+    },
+    {
+      "id": "AR-1042",
+      "categoria": "qualidade_ar",
+      "tipo": "critical",
+      "titulo": "Qualidade do Ar",
+      "descricao": "IQA atingiu nível RUIM (142) na sua região.",
+      "severidade": "Crítico",
+      "horario": "2026-05-21T13:39:00",
+      "lido": false,
+      "origem": "API IQAr",
+      "detalhe": {
+        "localizacao": "Região da Fazenda São Bento",
+        "acaoRecomendada": "Evite atividades externas e mantenha janelas fechadas.",
+        "dadosTecnicos": {
+          "iqa": "142 (Ruim)",
+          "poluente": "PM2.5",
+          "tendencia": "Subindo"
+        }
+      }
+    },
+    {
+      "id": "F-0231",
+      "categoria": "foco",
+      "tipo": "warning",
+      "titulo": "Risco de Propagação",
+      "descricao": "Foco F-0231 pode se expandir para o setor Sul. Monitore o Setor B.",
+      "severidade": "Alto",
+      "horario": "2026-05-21T12:24:00",
+      "lido": false,
+      "origem": "Focos Ativos",
+      "detalhe": {
+        "localizacao": "Setor B - borda Sul",
+        "acaoRecomendada": "Reforce o monitoramento do Setor B nas proximas 2h.",
+        "dadosTecnicos": {
+          "idFoco": "F-0231",
+          "direcao": "Sul",
+          "probabilidade": "61%"
+        }
+      }
+    },
+    {
+      "id": "MT-2026-05-21",
+      "categoria": "meteorologia",
+      "tipo": "warning",
+      "titulo": "Meteorologia",
+      "descricao": "Vento forte previsto 16h-20h (28 km/h NE). Risco de propagação elevado.",
+      "severidade": "Alto",
+      "horario": "2026-05-21T11:00:00",
+      "lido": true,
+      "origem": "Meteorologia",
+      "detalhe": {
+        "localizacao": "Toda a propriedade",
+        "acaoRecomendada": "Suspenda queimas controladas ate as 20h.",
+        "dadosTecnicos": {
+          "vento": "28 km/h NE",
+          "janela": "16h-20h",
+          "umidade": "32%"
+        }
+      }
+    },
+    {
+      "id": "RPT-ABR-2026",
+      "categoria": "relatorio",
+      "tipo": "info",
+      "titulo": "Relatorio disponivel",
+      "descricao": "Relatorio mensal de Abril 2026 gerado com sucesso.",
+      "severidade": "Info",
+      "horario": "2026-05-20T08:00:00",
+      "lido": true,
+      "origem": "Relatorios",
+      "detalhe": {
+        "localizacao": "Conta - Fazenda Sao Bento",
+        "acaoRecomendada": "Acesse a aba Relatorios para baixar o PDF.",
+        "dadosTecnicos": {
+          "periodo": "Abril 2026",
+          "formato": "PDF",
+          "tamanho": "1.4 MB"
+        }
+      }
+    },
+    {
+      "id": "SYS-GOES18",
+      "categoria": "sistema",
+      "tipo": "system",
+      "titulo": "Sistema",
+      "descricao": "Novo satelite GOES-18 disponivel para monitoramento na sua regiao.",
+      "severidade": "Sistema",
+      "horario": "2026-05-19T10:00:00",
+      "lido": true,
+      "origem": "Sistema",
+      "detalhe": {
+        "localizacao": "Cobertura regional",
+        "acaoRecomendada": "Nenhuma acao necessaria.",
+        "dadosTecnicos": {
+          "satelite": "GOES-18",
+          "status": "Ativo",
+          "resolucao": "2 km"
+        }
+      }
+    }
+  ],
+  "focos_incendio": [
+    {
+      "id": "1",
+      "lat": -18.841,
+      "lng": -41.928,
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "intensidade": "alta",
+      "localId": 3,
+      "data": "2026-05-23"
+    },
+    {
+      "id": "2",
+      "lat": -16.748,
+      "lng": -43.875,
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "intensidade": "media",
+      "localId": 2,
+      "data": "2026-05-21"
+    },
+    {
+      "id": "3",
+      "lat": -18.91,
+      "lng": -48.265,
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "intensidade": "baixa",
+      "localId": 1,
+      "data": "2026-05-17"
+    }
+  ],
+  "qualidade_ar": [
+    {
+      "id": "1",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "iqa": 215,
+      "classificacao": "Muito Ruim",
+      "localId": 3,
+      "data": "2026-05-23"
+    },
+    {
+      "id": "2",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "iqa": 178,
+      "classificacao": "Ruim",
+      "localId": 2,
+      "data": "2026-05-21"
+    },
+    {
+      "id": "3",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "iqa": 72,
+      "classificacao": "Moderada",
+      "localId": 1,
+      "data": "2026-05-24"
+    }
+  ],
+  "historico_queimadas": [
+    {
+      "id": "1",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 1,
+      "focos": 3,
+      "areaHectares": 45,
+      "causa": "Natural",
+      "localId": 3
+    },
+    {
+      "id": "2",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 1,
+      "focos": 1,
+      "areaHectares": 12,
+      "causa": "Natural",
+      "localId": 2
+    },
+    {
+      "id": "3",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 1,
+      "focos": 0,
+      "areaHectares": 0,
+      "causa": "N/A",
+      "localId": 1
+    },
+    {
+      "id": "4",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 2,
+      "focos": 5,
+      "areaHectares": 78,
+      "causa": "Ação humana",
+      "localId": 3
+    },
+    {
+      "id": "5",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 2,
+      "focos": 2,
+      "areaHectares": 28,
+      "causa": "Queima de pasto",
+      "localId": 2
+    },
+    {
+      "id": "6",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 2,
+      "focos": 1,
+      "areaHectares": 8,
+      "causa": "Ação humana",
+      "localId": 1
+    },
+    {
+      "id": "7",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 3,
+      "focos": 8,
+      "areaHectares": 156,
+      "causa": "Ação humana",
+      "localId": 3
+    },
+    {
+      "id": "8",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 3,
+      "focos": 4,
+      "areaHectares": 62,
+      "causa": "Queima de pasto",
+      "localId": 2
+    },
+    {
+      "id": "9",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 3,
+      "focos": 3,
+      "areaHectares": 35,
+      "causa": "Ação humana",
+      "localId": 1
+    },
+    {
+      "id": "10",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 4,
+      "focos": 12,
+      "areaHectares": 268,
+      "causa": "Ação humana",
+      "localId": 3
+    },
+    {
+      "id": "11",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 4,
+      "focos": 7,
+      "areaHectares": 105,
+      "causa": "Queima de pasto",
+      "localId": 2
+    },
+    {
+      "id": "12",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 4,
+      "focos": 5,
+      "areaHectares": 72,
+      "causa": "Ação humana",
+      "localId": 1
+    },
+    {
+      "id": "13",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 5,
+      "focos": 14,
+      "areaHectares": 320,
+      "causa": "Ação humana",
+      "localId": 3
+    },
+    {
+      "id": "14",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 5,
+      "focos": 6,
+      "areaHectares": 95,
+      "causa": "Queima de pasto",
+      "localId": 2
+    },
+    {
+      "id": "15",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 5,
+      "focos": 2,
+      "areaHectares": 18,
+      "causa": "Ação humana",
+      "localId": 1
+    },
+    {
+      "id": "16",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 6,
+      "focos": 9,
+      "areaHectares": 185,
+      "causa": "Ação humana",
+      "localId": 3
+    },
+    {
+      "id": "17",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 6,
+      "focos": 4,
+      "areaHectares": 58,
+      "causa": "Queima de pasto",
+      "localId": 2
+    },
+    {
+      "id": "18",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 6,
+      "focos": 1,
+      "areaHectares": 8,
+      "causa": "Natural",
+      "localId": 1
+    },
+    {
+      "id": "19",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 7,
+      "focos": 18,
+      "areaHectares": 412,
+      "causa": "Ação humana",
+      "localId": 3
+    },
+    {
+      "id": "20",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 7,
+      "focos": 11,
+      "areaHectares": 178,
+      "causa": "Queima de pasto",
+      "localId": 2
+    },
+    {
+      "id": "21",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 7,
+      "focos": 6,
+      "areaHectares": 95,
+      "causa": "Ação humana",
+      "localId": 1
+    },
+    {
+      "id": "22",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 8,
+      "focos": 22,
+      "areaHectares": 548,
+      "causa": "Ação humana",
+      "localId": 3
+    },
+    {
+      "id": "23",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 8,
+      "focos": 15,
+      "areaHectares": 245,
+      "causa": "Queima de pasto",
+      "localId": 2
+    },
+    {
+      "id": "24",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "ano": 2026,
+      "mes": 8,
+      "focos": 8,
+      "areaHectares": 128,
+      "causa": "Ação humana",
+      "localId": 1
+    }
+  ],
+  "meteorologia": [
+    {
+      "id": "1",
+      "cidade": "Uberlândia",
+      "estado": "MG",
+      "temperatura": 31,
+      "umidade": 38,
+      "vento": "18 km/h",
+      "condicao": "Ensolarado",
+      "localId": 1,
+      "data": "2026-05-24"
+    },
+    {
+      "id": "2",
+      "cidade": "Montes Claros",
+      "estado": "MG",
+      "temperatura": 35,
+      "umidade": 22,
+      "vento": "27 km/h",
+      "condicao": "Parcialmente Nublado",
+      "localId": 2,
+      "data": "2026-05-24"
+    },
+    {
+      "id": "3",
+      "cidade": "Governador Valadares",
+      "estado": "MG",
+      "temperatura": 38,
+      "umidade": 14,
+      "vento": "42 km/h",
+      "condicao": "Ensolarado",
+      "localId": 3,
+      "data": "2026-05-24"
+    }
+  ],
+  "contatos_emergencia": [
+    {
+      "id": "1",
+      "nome": "Bombeiros",
+      "telefone": "193",
+      "tipo": "bombeiro"
+    },
+    {
+      "id": "2",
+      "nome": "IBAMA",
+      "telefone": "0800-61-8080",
+      "tipo": "ambiental"
+    },
+    {
+      "id": "3",
+      "nome": "Defesa Civil",
+      "telefone": "199",
+      "tipo": "defesa civil"
+    }
+  ],
+  "relatorios": [
+    {
+      "id": "2",
+      "titulo": "Monitoramento Semana 21",
+      "tipo": "Semanal",
+      "localId": 3,
+      "usuarioId": 1,
+      "ocorrencias": 1,
+      "alertas": 1,
+      "observacoes": "Incêndio ativo, bombeiros acionados. Área controlada.",
+      "dataInicio": "2026-05-19",
+      "dataFim": "2026-05-25",
+      "status": "Finalizado",
+      "tamanhoMB": 0.8
+    },
+    {
+      "id": "3",
+      "titulo": "Foco F-0231 — Detalhado",
+      "tipo": "Ocorrência",
+      "localId": 1,
+      "usuarioId": 2,
+      "ocorrencias": 1,
+      "alertas": 0,
+      "observacoes": "Foco isolado na borda norte, análise em andamento.",
+      "dataInicio": "2026-05-22",
+      "dataFim": "2026-05-22",
+      "status": "Em revisão",
+      "tamanhoMB": 0.4
+    },
+    {
+      "id": "4",
+      "titulo": "Qualidade do Ar — Semana 20",
+      "tipo": "Qualidade Ar",
+      "localId": 3,
+      "usuarioId": 1,
+      "ocorrencias": 0,
+      "alertas": 1,
+      "observacoes": "Índice AQI acima do limite em dois dias.",
+      "dataInicio": "2026-05-12",
+      "dataFim": "2026-05-18",
+      "status": "Finalizado",
+      "tamanhoMB": 0.6
+    },
+    {
+      "id": "5",
+      "titulo": "Emissões Estimadas Maio",
+      "tipo": "Ambiental",
+      "localId": 2,
+      "usuarioId": 3,
+      "ocorrencias": 0,
+      "alertas": 0,
+      "observacoes": "Estimativa de CO2 em elaboração.",
+      "dataInicio": "2026-05-01",
+      "dataFim": "2026-05-31",
+      "status": "Rascunho",
+      "tamanhoMB": 0
+    },
+    {
+      "id": "6",
+      "titulo": "Relatório Oficial IBAMA",
+      "tipo": "Oficial",
+      "localId": 1,
+      "usuarioId": 2,
+      "ocorrencias": 4,
+      "alertas": 3,
+      "observacoes": "Relatório enviado ao órgão regulador.",
+      "dataInicio": "2026-04-01",
+      "dataFim": "2026-04-30",
+      "status": "Finalizado",
+      "tamanhoMB": 2.6
+    },
+    {
+      "titulo": "Testando",
+      "tipo": "Mensal",
+      "status": "Rascunho",
+      "localId": 1,
+      "usuarioId": "1",
+      "ocorrencias": 0,
+      "alertas": 0,
+      "observacoes": "",
+      "dataInicio": "",
+      "dataFim": "",
+      "tamanhoMB": 0,
+      "id": "0-LVK_iPoO4"
+    }
+  ],
+  "config_conta": [
+    {
+      "id": "1",
+      "usuarioId": 2,
+      "nomeCompleto": "Bruno Calazans Reis",
+      "cpf": "123.456.789-00",
+      "email": "brunocalazansreis@gmail.com",
+      "telefone": "+55 65 99999-0001",
+      "estado": "Mato Grosso",
+      "municipio": "Cuiabá",
+      "car": "MT-5103303-XXXXX",
+      "tipoPerfil": "Predador Rural",
+      "alertasEmail": true,
+      "resumoDiario": true,
+      "alertasVizinhos": false,
+      "alertasSMS": true,
+      "boletimSemanal": true,
+      "relatoriosAutomaticos": false,
+      "dataCriacao": "2025-01-15",
+      "dataAtualizacao": "2026-06-03"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

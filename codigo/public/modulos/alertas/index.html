@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alertas e Notificações — Flamer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+            <path d="M12 8c-1.5 2.5-3 4.5-3 6.5a3 3 0 006 0C15 12.5 13.5 10.5 12 8z" fill="#FDE68A"/>
+          </svg>
+        </div>
+        <span class="brand-name">Flamer</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="../../index.html" class="nav-item" style="--i:0">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+            <path d="M9 21V12h6v9"/>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="../dashboard/index.html" class="nav-item" style="--i:1">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="../focos_ativos/index.html" class="nav-item" style="--i:2">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          <span>Focos Ativos</span>
+        </a>
+        <a href="../reportar_ocorrencia/index.html" class="nav-item" style="--i:3">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/>
+            <path d="M14 17h6M17 14v6"/>
+          </svg>
+          <span>Reportar</span>
+        </a>
+        <a href="../qualidade_ar/index.html" class="nav-item" style="--i:4">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+            <circle cx="7" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>Qualidade do Ar</span>
+        </a>
+        <a href="../minha_propriedade/index.html" class="nav-item" style="--i:5">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+          <span>Minha Propriedade</span>
+        </a>
+        <a href="../relatorios/index.html" class="nav-item" style="--i:6">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M9 17H7a4 4 0 010-8h2"/>
+            <path d="M15 7h2a4 4 0 010 8h-2"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+          <span>Relatorios</span>
+        </a>
+        <a href="../historico_queimadas/index.html" class="nav-item" style="--i:7">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>Historico</span>
+        </a>
+        <a href="../alertas/index.html" class="nav-item active" style="--i:8">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+          <span>Alertas</span>
+        </a>
+        <a href="../meteorologia/meteorologia.html" class="nav-item" style="--i:9">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+          </svg>
+          <span>Meteorologia</span>
+        </a>
+        <a href="../contatos_de_emergência/emergencia.html" class="nav-item" style="--i:10">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.72 19.79 19.79 0 01.75 1.1 2 2 0 012.73.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.02 6.02l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <span>Contatos</span>
+        </a>
+        <a href="../config_da_conta/index.html" class="nav-item" style="--i:11">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Conta</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+
+        <div class="sidebar-user">
+        <div class="user-avatar">JP</div>
+        <span class="user-name">Joao Pedro</span>
+      </div>
+
+      </div></aside>
+
+    <div class="main">
+      <header class="topbar">
+        <h1 class="page-title">Alertas &amp; Notificações</h1>
+        <div class="topbar-actions">
+          <button class="btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+            Marcar todos como lidos
+          </button>
+          <div class="chip">Fazenda São Bento</div>
+          <button class="bell" aria-label="Alertas">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+            <span class="bell-badge">3</span>
+          </button>
+          <div class="topbar-avatar">JP</div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="alerts-panel">
+          <div class="tabs-search">
+            <div class="tabs">
+              <button class="tab active">Todos <span>(12)</span></button>
+              <button class="tab">Críticos <span>(2)</span></button>
+              <button class="tab">Não lidos <span>(3)</span></button>
+              <button class="tab">Sistemas <span>(4)</span></button>
+            </div>
+            <div class="search">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" placeholder="Buscar alertas..." />
+            </div>
+          </div>
+
+          <div class="alert-list">
+          </div>
+        </section>
+
+        <aside class="settings-panel">
+          <div class="settings-card">
+            <div class="settings-title">
+              <span>Configurar alertas</span>
+              <button class="btn-ghost" onclick="window.location.href='../config_da_conta/index.html#preferencias-alerta'" title="Ir para preferencias de alerta">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 008 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 003.6 15a1.65 1.65 0 00-1.51-1H2a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 003.6 8a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 008 4.6a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09A1.65 1.65 0 0016 4.6a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0020.4 9a1.65 1.65 0 001.51 1H22a2 2 0 012 2 2 2 0 01-2 2h-.09A1.65 1.65 0 0020.4 15z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="toggle-list">
+              <label class="toggle-row">
+                <span>Focos críticos (≤ 5 km)</span>
+                <input type="checkbox" checked />
+                <span class="toggle"></span>
+              </label>
+              <label class="toggle-row">
+                <span>Qualidade do ar</span>
+                <input type="checkbox" checked />
+                <span class="toggle"></span>
+              </label>
+              <label class="toggle-row">
+                <span>Alertas meteorológicos</span>
+                <input type="checkbox" checked />
+                <span class="toggle"></span>
+              </label>
+              <label class="toggle-row">
+                <span>Novos relatórios</span>
+                <input type="checkbox" />
+                <span class="toggle"></span>
+              </label>
+              <label class="toggle-row">
+                <span>Atualizações do sistema</span>
+                <input type="checkbox" />
+                <span class="toggle"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="settings-card">
+            <div class="settings-title">
+              <span>Canais de entrega</span>
+            </div>
+            <div class="toggle-list">
+              <label class="toggle-row">
+                <span>Email</span>
+                <input type="checkbox" checked data-pref-key="flamer_pref_email" />
+                <span class="toggle"></span>
+              </label>
+              <label class="toggle-row">
+                <span>SMS</span>
+                <input type="checkbox" checked data-pref-key="flamer_pref_sms" />
+                <span class="toggle"></span>
+              </label>
+              <label class="toggle-row">
+                <span>Push / App</span>
+                <input type="checkbox" data-pref-key="flamer_pref_push" />
+                <span class="toggle"></span>
+              </label>
+              <label class="toggle-row">
+                <span>WhatsApp</span>
+                <input type="checkbox" data-pref-key="flamer_pref_whatsapp" />
+                <span class="toggle"></span>
+              </label>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/login.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const tabs = document.querySelectorAll('.tab');
+      const searchInput = document.querySelector('.search input');
+      const markAllBtn = document.querySelector('.btn-outline');
+      const bellBadge = document.querySelector('.bell-badge');
+
+      await renderFocosDinamicos();
+      const cards = document.querySelectorAll('.alert-card');
+
+      let activeTab = 'todos';
+
+      function getUnreadCount() {
+        return [...cards].filter(
+          c => c.dataset.unread === 'true' && !c.classList.contains('read')
+        ).length;
+      }
+
+      function updateTabCounts() {
+        const total = cards.length;
+        const criticos = [...cards].filter(c => c.dataset.type === 'critical').length;
+        const unread = getUnreadCount();
+        const sistemas = [...cards].filter(c => c.dataset.type === 'system').length;
+
+        const counts = [total, criticos, unread, sistemas];
+        tabs.forEach((tab, i) => {
+          const span = tab.querySelector('span');
+          if (span) span.textContent = `(${counts[i]})`;
+        });
+      }
+
+      function updateBadge() {
+        const count = getUnreadCount();
+        bellBadge.textContent = count;
+        bellBadge.style.display = count > 0 ? 'flex' : 'none';
+        updateTabCounts();
+      }
+
+      const CATEGORIA_POR_TOGGLE = ['foco', 'qualidade_ar', 'meteorologia', 'relatorio', 'sistema'];
+
+      function categoriasHabilitadas() {
+        const ativas = new Set();
+        document.querySelectorAll('.settings-card:first-of-type .toggle-row input[type="checkbox"]').forEach((tg, i) => {
+          if (tg.checked && CATEGORIA_POR_TOGGLE[i]) ativas.add(CATEGORIA_POR_TOGGLE[i]);
+        });
+        return ativas;
+      }
+
+      function filterCards() {
+        const query = searchInput.value.toLowerCase().trim();
+        const ativas = categoriasHabilitadas();
+
+        cards.forEach(card => {
+          const type = card.dataset.type;
+          const categoria = card.dataset.categoria;
+          const isUnread = card.dataset.unread === 'true' && !card.classList.contains('read');
+          const text = card.textContent.toLowerCase();
+
+          let tabMatch = true;
+          if (activeTab === 'criticos') tabMatch = type === 'critical';
+          else if (activeTab === 'naolidos') tabMatch = isUnread;
+          else if (activeTab === 'sistemas') tabMatch = type === 'system';
+
+          const searchMatch = !query || text.includes(query);
+          const categoriaMatch = !categoria || ativas.has(categoria);
+
+          card.style.display = tabMatch && searchMatch && categoriaMatch ? '' : 'none';
+        });
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          cards.forEach(c => c.classList.remove('expanded'));
+
+          const label = tab.textContent.replace(/\s*\(.*\)/, '').trim().toLowerCase();
+          if (label === 'todos') activeTab = 'todos';
+          else if (label.includes('critico') || label.includes('crítico')) activeTab = 'criticos';
+          else if (label.includes('lido')) activeTab = 'naolidos';
+          else if (label.includes('sistema')) activeTab = 'sistemas';
+
+          filterCards();
+        });
+      });
+
+      searchInput.addEventListener('input', () => {
+        cards.forEach(card => card.classList.remove('expanded'));
+        filterCards();
+      });
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          const willExpand = !card.classList.contains('expanded');
+          cards.forEach(c => c.classList.remove('expanded'));
+          if (willExpand) card.classList.add('expanded');
+
+          if (!card.classList.contains('read')) {
+            card.classList.add('read');
+            updateBadge();
+            if (activeTab === 'naolidos') {
+              card.classList.remove('expanded');
+              filterCards();
+            }
+          }
+        });
+      });
+
+      document.querySelector('.alert-list').addEventListener('click', e => {
+        const btn = e.target.closest('.detail-btn');
+        if (!btn) return;
+        e.stopPropagation();
+
+        if (btn.classList.contains('detail-btn--ver')) {
+          const a = alertasCache.get(btn.dataset.alertaId);
+          if (a) abrirModalDetalhe(a);
+        } else if (btn.classList.contains('detail-btn--reportar')) {
+          const params = new URLSearchParams({ alerta: btn.dataset.alertaId, titulo: btn.dataset.titulo });
+          window.location.href = `../reportar_ocorrencia/index.html?${params}`;
+        } else if (btn.classList.contains('detail-btn--compartilhar')) {
+          const titulo = btn.dataset.titulo;
+          const descricao = btn.dataset.descricao;
+          const url = window.location.href.split('?')[0];
+          const shareData = { title: `Flamer — ${titulo}`, text: descricao, url };
+          if (navigator.share) {
+            navigator.share(shareData).catch(() => {});
+          } else {
+            navigator.clipboard.writeText(`${titulo}\n${descricao}\n${url}`).then(() => {
+              btn.textContent = 'Copiado!';
+              setTimeout(() => { btn.textContent = 'Compartilhar'; }, 2000);
+            });
+          }
+        }
+      });
+
+      markAllBtn.addEventListener('click', () => {
+        cards.forEach(card => card.classList.add('read'));
+        updateBadge();
+        if (activeTab === 'naolidos') filterCards();
+      });
+
+      const toggles = document.querySelectorAll('.toggle-row input[type="checkbox"]');
+      const togglesConfig = document.querySelectorAll('.settings-card:first-of-type .toggle-row input[type="checkbox"]');
+      toggles.forEach((toggle, i) => {
+        const namedKey = toggle.dataset.prefKey;
+        const indexKey = `flamer_toggle_${i}`;
+        const key = namedKey || indexKey;
+        const saved = localStorage.getItem(key);
+        if (saved !== null) toggle.checked = saved === 'true';
+
+        toggle.addEventListener('change', () => {
+          localStorage.setItem(key, toggle.checked);
+          if (namedKey) localStorage.setItem(namedKey, toggle.checked);
+          if ([...togglesConfig].includes(toggle)) filterCards();
+        });
+      });
+
+      window.addEventListener('storage', e => {
+        if (!e.key || !e.key.startsWith('flamer_pref_')) return;
+        toggles.forEach(toggle => {
+          if (toggle.dataset.prefKey === e.key) {
+            toggle.checked = e.newValue === 'true';
+          }
+        });
+      });
+
+      updateTabCounts();
+      updateBadge();
+      filterCards();
+    });
+
+    const alertasCache = new Map();
+
+    async function renderFocosDinamicos() {
+      const list = document.querySelector('.alert-list');
+      if (!list) return;
+      try {
+        const res = await fetch('http://localhost:3001/alertas');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const alertas = await res.json();
+        alertasCache.clear();
+        alertas.forEach(a => alertasCache.set(String(a.id), a));
+        list.innerHTML = alertas.map(alertaToCardHTML).join('');
+      } catch (err) {
+        console.error('Falha ao carregar alertas:', err);
+        list.innerHTML = '<div style="padding:24px;color:#64748b;text-align:center">Nao foi possivel carregar alertas. Verifique se o json-server esta rodando em :3001.</div>';
+      }
+    }
+
+    const COORDS_PADRAO = { lat: -19.925, lng: -43.94 };
+
+    const CHECKLISTS = {
+      foco_critical: [
+        'Acione imediatamente a brigada da fazenda.',
+        'Isole o perimetro afetado e mantenha pessoas a distancia segura.',
+        'Comunique propriedades vizinhas no raio de 5 km.',
+        'Ligue para o Corpo de Bombeiros (193) se o foco progredir.'
+      ],
+      foco_warning: [
+        'Reforce o monitoramento do setor afetado.',
+        'Prepare a brigada e equipamentos para acionamento rapido.',
+        'Acompanhe a evolucao do vento e umidade nas proximas 2 horas.'
+      ],
+      qualidade_ar: [
+        'Feche janelas e portas das areas habitadas.',
+        'Suspenda atividades externas (trabalho de campo, exercicios).',
+        'Pessoas com problemas respiratorios devem usar mascara N95.',
+        'Verifique medidores locais periodicamente.'
+      ],
+      meteorologia: [
+        'Suspenda queimas controladas durante a janela de risco.',
+        'Reforce aceiros nas divisas mais vulneraveis.',
+        'Mantenha equipe atenta a focos durante o periodo de vento forte.'
+      ],
+      relatorio: [
+        'Acesse o relatorio na aba Relatorios.',
+        'Compartilhe com a gestao e tecnicos responsaveis.'
+      ],
+      sistema: [
+        'Nenhuma acao necessaria. Atualizacao informativa.',
+        'Revise suas preferencias na aba Conta se desejar.'
+      ]
+    };
+
+    const CONTATOS = [
+      { nome: 'Corpo de Bombeiros', tel: '193' },
+      { nome: 'Defesa Civil', tel: '199' },
+      { nome: 'IBAMA (Prevfogo)', tel: '0800-61-8080' },
+      { nome: 'ICMBio', tel: '0800-940-7755' }
+    ];
+
+    function gerarChecklist(a) {
+      if (a.categoria === 'foco') {
+        return CHECKLISTS[a.tipo === 'critical' ? 'foco_critical' : 'foco_warning'];
+      }
+      return CHECKLISTS[a.categoria] || ['Acompanhe a evolucao do alerta.'];
+    }
+
+    function bboxAoRedor(lat, lng, d = 0.02) {
+      return `${lng - d},${lat - d},${lng + d},${lat + d}`;
+    }
+
+    function montarModalHTML(a) {
+      const detalhe = a.detalhe || {};
+      const dados = detalhe.dadosTecnicos || {};
+      const pillCls = { critical: 'pill--critical', warning: 'pill--warning', info: 'pill--info', system: 'pill--system' }[a.tipo] || 'pill--info';
+      const techItems = Object.entries(dados).map(
+        ([k, v]) => `<div class="tech-item"><span>${formatarChave(k)}</span><span>${v}</span></div>`
+      ).join('');
+      const coords = detalhe.coords || COORDS_PADRAO;
+      const bbox = bboxAoRedor(coords.lat, coords.lng);
+      const mapaSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${coords.lat},${coords.lng}`;
+      const checklist = gerarChecklist(a).map(p => `<li>${p}</li>`).join('');
+      const contatos = CONTATOS.map(c => `<li><a href="tel:${c.tel.replace(/[^0-9]/g, '')}">${c.nome}<span>${c.tel}</span></a></li>`).join('');
+      const horario = a.horario ? new Date(a.horario).toLocaleString('pt-BR') : '';
+      return `
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+          <div class="modal-header">
+            <div class="modal-header-info">
+              <div id="modal-titulo" class="modal-title">${a.titulo}</div>
+              <div class="modal-subtitle">${a.origem || ''} ${horario ? '· ' + horario : ''}</div>
+            </div>
+            <span class="pill ${pillCls}">${a.severidade}</span>
+            <button type="button" class="modal-close" aria-label="Fechar">&times;</button>
+          </div>
+          <div>${a.descricao}</div>
+          ${detalhe.localizacao ? `<div class="modal-section"><h3>Localizacao</h3><div>${detalhe.localizacao}</div></div>` : ''}
+          <div class="modal-section">
+            <h3>Mapa</h3>
+            <iframe class="modal-map" src="${mapaSrc}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          ${detalhe.acaoRecomendada ? `<div class="modal-section"><h3>Acao recomendada</h3><div>${detalhe.acaoRecomendada}</div></div>` : ''}
+          ${techItems ? `<div class="modal-section"><h3>Dados tecnicos</h3><div class="detail-tech">${techItems}</div></div>` : ''}
+          <div class="modal-section">
+            <h3>Checklist de resposta</h3>
+            <ol class="modal-checklist">${checklist}</ol>
+          </div>
+          <div class="modal-section">
+            <h3>Contatos de emergencia</h3>
+            <ul class="modal-contatos">${contatos}</ul>
+          </div>
+        </div>`;
+    }
+
+    function abrirModalDetalhe(a) {
+      const mount = document.getElementById('modal-detalhe');
+      if (!mount) return;
+      mount.innerHTML = montarModalHTML(a);
+      mount.hidden = false;
+      document.body.style.overflow = 'hidden';
+      mount.querySelector('.modal-close').addEventListener('click', fecharModal);
+      mount.addEventListener('click', e => { if (e.target === mount) fecharModal(); });
+      document.addEventListener('keydown', escFecha);
+    }
+
+    function fecharModal() {
+      const mount = document.getElementById('modal-detalhe');
+      if (!mount) return;
+      mount.hidden = true;
+      mount.innerHTML = '';
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', escFecha);
+    }
+
+    function escFecha(e) { if (e.key === 'Escape') fecharModal(); }
+
+    function alertaToCardHTML(a) {
+      const iconePorCategoria = { foco: '🔥', qualidade_ar: '🌫️', meteorologia: '🌬️', relatorio: '📄', sistema: '🧰' };
+      const pillCls = { critical: 'pill--critical', warning: 'pill--warning', info: 'pill--info', system: 'pill--system' }[a.tipo] || 'pill--info';
+      const cardModifier = a.tipo === 'critical' ? ' alert-card--critical' : (a.tipo === 'warning' ? ' alert-card--warning' : '');
+      const icone = iconePorCategoria[a.categoria] || '🔔';
+      const tempo = formatarTempo(a.horario);
+      const readCls = a.lido ? ' read' : '';
+      const detalhe = a.detalhe || {};
+      const dadosTecnicos = detalhe.dadosTecnicos || {};
+      const techItems = Object.entries(dadosTecnicos).map(
+        ([k, v]) => `<div class="tech-item"><span>${formatarChave(k)}</span><span>${v}</span></div>`
+      ).join('');
+      return `
+        <article class="alert-card${cardModifier}${readCls}" data-type="${a.tipo}" data-unread="${!a.lido}" data-categoria="${a.categoria}">
+          <div class="alert-icon"><span>${icone}</span></div>
+          <div class="alert-body">
+            <div class="alert-title">${a.titulo}</div>
+            <div class="alert-text">${a.descricao}</div>
+          </div>
+          <div class="alert-meta">
+            <span>${tempo}</span>
+            <span class="pill ${pillCls}">${a.severidade}</span>
+          </div>
+          <div class="alert-detail">
+            ${detalhe.localizacao ? `<div class="detail-row"><strong>Localizacao:</strong> ${detalhe.localizacao}</div>` : ''}
+            ${detalhe.acaoRecomendada ? `<div class="detail-row"><strong>Acao recomendada:</strong> ${detalhe.acaoRecomendada}</div>` : ''}
+            ${techItems ? `<div class="detail-tech">${techItems}</div>` : ''}
+            <div class="detail-actions">
+              <button type="button" class="detail-btn detail-btn--ver" data-alerta-id="${a.id}">Ver detalhes</button>
+              <button type="button" class="detail-btn detail-btn--reportar" data-alerta-id="${a.id}" data-titulo="${a.titulo.replace(/"/g, '&quot;')}">Reportar</button>
+              <button type="button" class="detail-btn detail-btn--compartilhar" data-alerta-id="${a.id}" data-titulo="${a.titulo.replace(/"/g, '&quot;')}" data-descricao="${a.descricao.replace(/"/g, '&quot;')}">Compartilhar</button>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function formatarTempo(iso) {
+      if (!iso) return '';
+      const data = new Date(iso);
+      if (isNaN(data)) return iso;
+      const agora = new Date();
+      const diffMin = Math.round((agora - data) / 60000);
+      if (diffMin < 60) return `Ha ${diffMin} min`;
+      const diffH = Math.round(diffMin / 60);
+      if (diffH < 24) return `Ha ${diffH} h`;
+      const diffD = Math.round(diffH / 24);
+      if (diffD === 1) return 'Ontem';
+      if (diffD < 7) return `${diffD} dias atras`;
+      return data.toLocaleDateString('pt-BR');
+    }
+
+    function formatarChave(k) {
+      const mapa = { idFoco: 'ID do foco', iqa: 'IQA', dadosTecnicos: 'Dados' };
+      if (mapa[k]) return mapa[k];
+      return k.charAt(0).toUpperCase() + k.slice(1).replace(/([A-Z])/g, ' $1');
+    }
+  </script>
+  <script>
+    document.querySelectorAll('.glass-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--mx', '50%');
+        card.style.setProperty('--my', '50%');
+      });
+    });
+  </script>
+  <div id="modal-detalhe" hidden></div>
+</body>
+</html>

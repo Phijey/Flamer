@@ -1,0 +1,37 @@
+.about-content { padding: 28px 32px; max-width: 920px; }
+
+.about-hero {
+  background: linear-gradient(155deg, #F97316, #C2410C);
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  margin-bottom: 24px;
+}
+.about-hero h1 { font-size: 30px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.02em; }
+.about-hero p { font-size: 15px; line-height: 1.6; max-width: 560px; opacity: .95; margin: 0; }
+
+.about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+
+.about-card {
+  background: rgba(255, 255, 255, .6);
+  border: 1px solid rgba(255, 255, 255, .74);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+}
+.about-card h3 { font-size: 15px; font-weight: 600; margin: 0 0 6px; color: #1A1A1A; }
+.about-card p { font-size: 13.5px; line-height: 1.55; color: #6B6861; margin: 0; }
+
+.about-section { margin-top: 24px; }
+.about-section h2 { font-size: 17px; font-weight: 600; color: #1A1A1A; margin: 0 0 12px; letter-spacing: -0.01em; }
+
+.team-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.team-chip {
+  background: rgba(255, 255, 255, .7);
+  border: 1px solid rgba(255, 255, 255, .8);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #1A1A1A;
+  backdrop-filter: blur(10px);
+}

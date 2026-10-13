@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meteorologia — Flamer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="meteorologia.css" />
+  <link rel="stylesheet" href="../../assets/css/sidebar.css">
+</head>
+<body>
+<!--  -->
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+            <path d="M12 8c-1.5 2.5-3 4.5-3 6.5a3 3 0 006 0C15 12.5 13.5 10.5 12 8z" fill="#FDE68A"/>
+          </svg>
+        </div>
+        <span class="brand-name">Flamer</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="../../index.html" class="nav-item" style="--i:0">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+            <path d="M9 21V12h6v9"/>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="../dashboard/index.html" class="nav-item" style="--i:1">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="../focos_ativos/index.html" class="nav-item" style="--i:2">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          <span>Focos Ativos</span>
+        </a>
+        <a href="../reportar_ocorrencia/index.html" class="nav-item" style="--i:3">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/>
+            <path d="M14 17h6M17 14v6"/>
+          </svg>
+          <span>Reportar</span>
+        </a>
+        <a href="../qualidade_ar/index.html" class="nav-item" style="--i:4">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+            <circle cx="7" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+          <span>Qualidade do Ar</span>
+        </a>
+        <a href="../minha_propriedade/index.html" class="nav-item" style="--i:5">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+          <span>Minha Propriedade</span>
+        </a>
+        <a href="../relatorios/index.html" class="nav-item" style="--i:6">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M9 17H7a4 4 0 010-8h2"/>
+            <path d="M15 7h2a4 4 0 010 8h-2"/>
+            <line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+          <span>Relatórios</span>
+        </a>
+        <a href="../historico_queimadas/index.html" class="nav-item" style="--i:7">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>Histórico</span>
+        </a>
+        <a href="../alertas/index.html" class="nav-item" style="--i:8">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+          <span>Alertas</span>
+        </a>
+        <a href="../meteorologia/meteorologia.html" class="nav-item active" style="--i:9">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+          </svg>
+          <span>Meteorologia</span>
+        </a>
+        <a href="../contatos_de_emergência/emergencia.html" class="nav-item" style="--i:10">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.72 19.79 19.79 0 01.75 1.1 2 2 0 012.73.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.02 6.02l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <span>Contatos</span>
+        </a>
+        <a href="../config_da_conta/index.html" class="nav-item" style="--i:11">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Conta</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+
+        <div class="sidebar-user">
+        <div class="user-avatar">BC</div>
+        <span class="user-name">Bruno Calazans</span>
+      </div>
+
+      </div></aside>
+
+    <div class="main-area">
+
+      <header class="topbar">
+        <h1 class="page-title">Previsão Meteorológica</h1>
+        <div class="topbar-controls">
+          <div class="topbar-chip topbar-chip--wide">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+            </svg>
+            <span id="nomeLocalChip">Detectando localização...</span>
+          </div>
+          <button class="topbar-bell" aria-label="Alertas">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+            <span class="bell-badge">3</span>
+          </button>
+          <div class="topbar-avatar">BC</div>
+        </div>
+      </header>
+
+      <div class="loc-tabs">
+        <button class="loc-tab active" id="tabAtual" onclick="switchTab('atual')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+          Localização Atual
+        </button>
+        <div class="loc-tab-sep"></div>
+        <button class="loc-tab" id="tabCadastrado" onclick="switchTab('cadastrado')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+          Minha Propriedade
+        </button>
+        <span class="loc-tab-badge" id="tabSourceBadge">Detectando localização…</span>
+      </div>
+
+      <main class="content-area">
+        <div class="met-layout">
+
+          <div class="met-main">
+
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+                    <circle cx="12" cy="10" r="2.5"/>
+                  </svg>
+                </div>
+                <span class="card-title"><span id="nomeLocalCard">...</span> — Agora</span>
+                <span class="card-update">Atualizado às 14:32</span>
+              </div>
+
+              <div class="kpi-strip">
+
+                <div class="kpi-item">
+                  <div class="kpi-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8">
+                      <path d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/>
+                    </svg>
+                  </div>
+                  <div class="kpi-value" id="kpiTemp">34°C</div>
+                  <div class="kpi-label">Temperatura</div>
+                </div>
+
+                <div class="kpi-item">
+                  <div class="kpi-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.8">
+                      <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/>
+                    </svg>
+                  </div>
+                  <div class="kpi-value" id="kpiUmidade">18%</div>
+                  <div class="kpi-label">Umidade</div>
+                </div>
+
+                <div class="kpi-item">
+                  <div class="kpi-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8">
+                      <path d="M17.7 7.7a2.5 2.5 0 111.8 4.3H2"/>
+                      <path d="M9.6 4.6A2 2 0 1111 8H2"/>
+                      <path d="M12.6 19.4A2 2 0 1014 16H2"/>
+                    </svg>
+                  </div>
+                  <div class="kpi-value" id="kpiVento">22 km/h</div>
+                  <div class="kpi-label" id="kpiVentoLabel">Vento NE</div>
+                </div>
+
+                <div class="kpi-item">
+                  <div class="kpi-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="1.8">
+                      <circle cx="12" cy="12" r="4"/>
+                      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                    </svg>
+                  </div>
+                  <div class="kpi-value" id="kpiUV">9.8</div>
+                  <div class="kpi-label">UV Index</div>
+                </div>
+
+                <div class="kpi-item">
+                  <div class="kpi-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8">
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="M12 8v4M12 16h.01"/>
+                    </svg>
+                  </div>
+                  <div class="kpi-value" id="kpiPressao">1012</div>
+                  <div class="kpi-label">Pressão hPa</div>
+                </div>
+
+              </div>
+              <div id="imagemCondicao" class="imagem-condicao"></div>
+            </div>
+
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                </div>
+                <span class="card-title">Previsão 7 Dias</span>
+              </div>
+
+              <div class="forecast-strip">
+
+                <div class="day-card day-card--today">
+                  <div class="day-name">Seg</div>
+                  <div class="day-tag-today">Hoje</div>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                  </svg>
+                  <div class="day-temps"><span class="day-max">34°</span><span class="day-min">22°</span></div>
+                  <div class="day-rain">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#60A5FA" stroke="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    5%
+                  </div>
+                  <div class="day-wind">22 km/h</div>
+                  <div class="risk-badge risk-alto">ALTO</div>
+                </div>
+
+                <div class="day-card">
+                  <div class="day-name">Ter</div>
+                  <div class="day-tag-spacer"></div>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                  </svg>
+                  <div class="day-temps"><span class="day-max">36°</span><span class="day-min">21°</span></div>
+                  <div class="day-rain">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#60A5FA" stroke="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    8%
+                  </div>
+                  <div class="day-wind">20 km/h</div>
+                  <div class="risk-badge risk-alto">ALTO</div>
+                </div>
+
+                <div class="day-card">
+                  <div class="day-name">Qua</div>
+                  <div class="day-tag-spacer"></div>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                  </svg>
+                  <div class="day-temps"><span class="day-max">37°</span><span class="day-min">20°</span></div>
+                  <div class="day-rain">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#60A5FA" stroke="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    40%
+                  </div>
+                  <div class="day-wind">19 km/h</div>
+                  <div class="risk-badge risk-alto">ALTO</div>
+                </div>
+
+                <div class="day-card">
+                  <div class="day-name">Qui</div>
+                  <div class="day-tag-spacer"></div>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.8">
+                    <path d="M20 17.58A5 5 0 0018 8h-1.26A8 8 0 104 16.25"/>                   
+                    <line x1="8" y1="19" x2="8" y2="21"/><line x1="8" y1="13" x2="8" y2="15"/>
+                    <line x1="12" y1="15" x2="12" y2="17"/><line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="16" y1="19" x2="16" y2="21"/><line x1="16" y1="13" x2="16" y2="15"/>
+                  </svg>
+                  <div class="day-temps"><span class="day-max">28°</span><span class="day-min">19°</span></div>
+                  <div class="day-rain">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#60A5FA" stroke="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    60%
+                  </div>
+                  <div class="day-wind">12 km/h</div>
+                  <div class="risk-badge risk-med">MED</div>
+                </div>
+
+                <div class="day-card">
+                  <div class="day-name">Sex</div>
+                  <div class="day-tag-spacer"></div>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.8">
+                    <path d="M20 17.58A5 5 0 0018 8h-1.26A8 8 0 104 16.25"/>
+                    <line x1="8" y1="19" x2="8" y2="21"/><line x1="8" y1="13" x2="8" y2="15"/>
+                    <line x1="12" y1="15" x2="12" y2="17"/><line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="16" y1="19" x2="16" y2="21"/><line x1="16" y1="13" x2="16" y2="15"/>
+                  </svg>
+                  <div class="day-temps"><span class="day-max">29°</span><span class="day-min">17°</span></div>
+                  <div class="day-rain">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#60A5FA" stroke="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    80%
+                  </div>
+                  <div class="day-wind">10 km/h</div>
+                  <div class="risk-badge risk-bai">BAI</div>
+                </div>
+
+                <div class="day-card">
+                  <div class="day-name">Sáb</div>
+                  <div class="day-tag-spacer"></div>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke-width="1.8">
+                    <circle cx="10" cy="13" r="5" stroke="#9CA3AF"/>
+                    <path d="M15 8a3 3 0 013 3" stroke="#F97316"/>
+                    <path d="M13.5 5.5A5 5 0 0121 11" stroke="#F97316" opacity="0.5"/>
+                  </svg>
+                  <div class="day-temps"><span class="day-max">27°</span><span class="day-min">18°</span></div>
+                  <div class="day-rain">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#60A5FA" stroke="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    30%
+                  </div>
+                  <div class="day-wind">15 km/h</div>
+                  <div class="risk-badge risk-med">MED</div>
+                </div>
+
+                <div class="day-card">
+                  <div class="day-name">Dom</div>
+                  <div class="day-tag-spacer"></div>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                  </svg>
+                  <div class="day-temps"><span class="day-max">30°</span><span class="day-min">20°</span></div>
+                  <div class="day-rain">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#60A5FA" stroke="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                    10%
+                  </div>
+                  <div class="day-wind">20 km/h</div>
+                  <div class="risk-badge risk-alto">ALTO</div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="met-bottom">
+
+              <div class="glass-card">
+                <div class="card-header">
+                  <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                  </div>
+                  <span class="card-title">Velocidade do Vento — 24h</span>
+                </div>
+
+                <div class="wind-chart-wrap">
+                  <svg viewBox="0 0 560 108" class="wind-chart-svg" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="windGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#F97316" stop-opacity="0.22"/>
+                        <stop offset="100%" stop-color="#F97316" stop-opacity="0.02"/>
+                      </linearGradient>
+                    </defs>
+                    <line x1="0" y1="28" x2="560" y2="28" stroke="rgba(228,226,222,0.4)" stroke-width="1"/>
+                    <line x1="0" y1="58" x2="560" y2="58" stroke="rgba(228,226,222,0.4)" stroke-width="1"/>
+                    <line x1="0" y1="88" x2="560" y2="88" stroke="rgba(228,226,222,0.4)" stroke-width="1"/>
+                    <line x1="0" y1="52" x2="560" y2="52" stroke="rgba(239,68,68,0.35)" stroke-width="1" stroke-dasharray="5,4"/>
+                    <text x="8" y="48" font-size="9" fill="rgba(239,68,68,0.65)" font-family="DM Mono, monospace">Limiar risco</text>
+                    <text x="0" y="26" font-size="8.5" fill="rgba(158,154,148,0.8)" font-family="DM Mono, monospace">30</text>
+                    <text x="0" y="56" font-size="8.5" fill="rgba(158,154,148,0.8)" font-family="DM Mono, monospace">20</text>
+                    <text x="0" y="86" font-size="8.5" fill="rgba(158,154,148,0.8)" font-family="DM Mono, monospace">10</text>
+                    <path d="M24,65 48,75 72,85 96,95 120,80 144,65 168,55 192,45 216,35 240,25 264,45 288,55 312,65 336,45 360,35 384,25 408,15 432,25 456,35 480,45 504,55 528,65 552,75 560,85 560,108 24,108 Z"
+                          fill="url(#windGrad)"/>
+                    <polyline
+                      points="24,65 48,75 72,85 96,95 120,80 144,65 168,55 192,45 216,35 240,25 264,45 288,55 312,65 336,45 360,35 384,25 408,15 432,25 456,35 480,45 504,55 528,65 552,75"
+                      fill="none" stroke="#F97316" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                    <circle cx="408" cy="15" r="3.5" fill="#F97316"/>
+                    <circle cx="408" cy="15" r="6" fill="rgba(249,115,22,0.18)"/>
+                  </svg>
+                  <div class="wind-chart-hours">
+                    <span>0h</span><span>3h</span><span>6h</span><span>9h</span>
+                    <span>12h</span><span>15h</span><span>18h</span><span>21h</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass-card">
+                <div class="card-header">
+                  <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polygon points="12,6 9,13 12,11 15,13"/>
+                    </svg>
+                  </div>
+                  <span class="card-title">Rosa dos Ventos</span>
+                </div>
+
+                <div class="wind-rose-wrap">
+                  <svg viewBox="0 0 150 150" class="wind-rose-svg">
+                    <circle cx="75" cy="75" r="56" fill="none" stroke="rgba(228,226,222,0.35)" stroke-width="1"/>
+                    <circle cx="75" cy="75" r="38" fill="none" stroke="rgba(228,226,222,0.22)" stroke-width="0.8"/>
+                    <circle cx="75" cy="75" r="20" fill="rgba(249,115,22,0.05)" stroke="rgba(228,226,222,0.18)" stroke-width="0.8"/>
+                    <line x1="75" y1="19" x2="75" y2="30" stroke="rgba(155,150,144,0.55)" stroke-width="1.5"/>
+                    <line x1="131" y1="75" x2="120" y2="75" stroke="rgba(155,150,144,0.55)" stroke-width="1.5"/>
+                    <line x1="75" y1="131" x2="75" y2="120" stroke="rgba(155,150,144,0.55)" stroke-width="1.5"/>
+                    <line x1="19" y1="75" x2="30" y2="75" stroke="rgba(155,150,144,0.55)" stroke-width="1.5"/>
+                    <line x1="114.6" y1="35.4" x2="107.1" y2="42.9" stroke="rgba(155,150,144,0.28)" stroke-width="1"/>
+                    <line x1="114.6" y1="114.6" x2="107.1" y2="107.1" stroke="rgba(155,150,144,0.28)" stroke-width="1"/>
+                    <line x1="35.4" y1="114.6" x2="42.9" y2="107.1" stroke="rgba(155,150,144,0.28)" stroke-width="1"/>
+                    <line x1="35.4" y1="35.4" x2="42.9" y2="42.9" stroke="rgba(155,150,144,0.28)" stroke-width="1"/>
+                    <text x="75" y="13" text-anchor="middle" font-size="10" fill="#9E9A94" font-family="DM Mono, monospace">N</text>
+                    <text x="143" y="79" text-anchor="middle" font-size="10" fill="#9E9A94" font-family="DM Mono, monospace">L</text>
+                    <text x="75" y="147" text-anchor="middle" font-size="10" fill="#9E9A94" font-family="DM Mono, monospace">S</text>
+                    <text x="7" y="79" text-anchor="middle" font-size="10" fill="#9E9A94" font-family="DM Mono, monospace">O</text>
+                    <text id="rosaVentoDirLabel" x="120" y="32" text-anchor="middle" font-size="9.5" fill="#F97316" font-weight="600" font-family="DM Mono, monospace">NE</text>
+                    <g id="rosaVentoSeta">
+                      <line x1="64" y1="86" x2="104" y2="46" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+                      <polygon points="104,46 99,58 92,51" fill="#F97316"/>
+                    </g>
+                    <circle cx="75" cy="75" r="5" fill="rgba(249,115,22,0.15)"/>
+                    <circle cx="75" cy="75" r="2.5" fill="#F97316"/>
+                    <text id="rosaVentoVelLabel" x="75" y="101" text-anchor="middle" font-size="10" fill="#F97316" font-weight="600" font-family="DM Mono, monospace">22 km/h</text>
+                    <text id="rosaVentoDirDesc" x="75" y="113" text-anchor="middle" font-size="8.5" fill="#9E9A94" font-family="DM Mono, monospace">Nordeste</text>
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="met-aside">
+
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon card-icon--fire">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/>
+                  </svg>
+                </div>
+                <span class="card-title">Índice de Risco de Fogo</span>
+              </div>
+
+              <div class="fwi-level" id="fwiNivel">ALTO</div>
+              <div class="fwi-score" id="fwiScore">FWI: 78 / 100</div>
+
+              <div class="fwi-bar-track">
+                <div class="fwi-bar-fill" id="fwiFill"></div>
+                <div class="fwi-marker" id="fwiMarker" style="left: 78%"></div>
+              </div>
+              <div class="fwi-scale">
+                <span>Baixo</span><span>Médio</span><span>Alto</span>
+              </div>
+
+              <div class="fwi-divider"></div>
+
+              <div class="fwi-stats">
+                <div class="fwi-stat">
+                  <span class="fwi-stat-label">Temperatura</span>
+                  <span class="fwi-stat-val fwi-up" id="fwiStatTemp">
+                    34°C
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                  </span>
+                </div>
+                <div class="fwi-stat">
+                  <span class="fwi-stat-label">Umidade</span>
+                  <span class="fwi-stat-val fwi-down" id="fwiStatUmid">
+                    18%
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </span>
+                </div>
+                <div class="fwi-stat">
+                  <span class="fwi-stat-label">Vento</span>
+                  <span class="fwi-stat-val fwi-up" id="fwiStatVento">
+                    22 km/h
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                  </span>
+                </div>
+                <div class="fwi-stat">
+                  <span class="fwi-stat-label">Chuva 7d</span>
+                  <span class="fwi-stat-val fwi-down" id="fwiStatChuva">
+                    2.7 mm
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <span class="card-title">Alertas Meteorológicos</span>
+              </div>
+
+              <div class="met-alert-list" id="listaAlertas">
+                <div class="met-alert-item">
+                  <div class="met-alert-dot met-alert-dot--high"></div>
+                  <div class="met-alert-body">
+                    <div class="met-alert-text">Vento forte 16h–20h</div>
+                    <div class="met-alert-sub">Rajadas acima de 45 km/h esperadas</div>
+                  </div>
+                </div>
+                <div class="met-alert-item">
+                  <div class="met-alert-dot met-alert-dot--med"></div>
+                  <div class="met-alert-body">
+                    <div class="met-alert-text">Baixa umidade por 3 dias</div>
+                    <div class="met-alert-sub">Umidade relativa abaixo de 20%</div>
+                  </div>
+                </div>
+                <div class="met-alert-item">
+                  <div class="met-alert-dot met-alert-dot--med"></div>
+                  <div class="met-alert-body">
+                    <div class="met-alert-text">Sem chuva prevista até Qui</div>
+                    <div class="met-alert-sub">Vegetação em risco de ressecamento</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/login.js"></script>
+  <script>
+    const DIAS_SEMANA = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+
+    const ICONES_TEMPO = {
+      0: '☀', 1: '🌤', 2: '⛅', 3: '☁',
+      45: '🌫', 48: '🌫',
+      51: '🌦', 53: '🌦', 55: '🌧',
+      61: '🌧', 63: '🌧', 65: '🌧',
+      71: '🌨', 73: '🌨', 75: '🌨',
+      80: '🌦', 81: '🌧', 82: '🌧',
+      95: '⛈', 96: '⛈', 99: '⛈',
+    };
+
+    const DESC_TEMPO = {
+      0: 'Céu limpo', 1: 'Parcialmente nublado', 2: 'Nublado', 3: 'Encoberto',
+      45: 'Névoa', 48: 'Névoa com geada',
+      51: 'Garoa leve', 53: 'Garoa moderada', 55: 'Garoa forte',
+      61: 'Chuva leve', 63: 'Chuva moderada', 65: 'Chuva forte',
+      71: 'Nevada leve', 73: 'Nevada moderada', 75: 'Nevada forte',
+      80: 'Pancadas de chuva', 81: 'Chuva moderada', 82: 'Chuva forte',
+      95: 'Tempestade', 96: 'Tempestade com granizo', 99: 'Tempestade forte',
+    };
+
+    const DIRECOES = ['N', 'NE', 'L', 'SE', 'S', 'SO', 'O', 'NO'];
+
+    const SVGS_CONDICAO = {
+      limpo: `<svg viewBox="0 0 192 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="96" cy="40" r="28" fill="#FDE68A" opacity="0.25"/>
+        <circle cx="96" cy="40" r="20" fill="#FDE68A" opacity="0.4"/>
+        <circle cx="96" cy="40" r="13" fill="#FBBF24"/>
+        <g stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round">
+          <line x1="96" y1="10" x2="96" y2="18"/>
+          <line x1="96" y1="10" x2="96" y2="18" transform="rotate(45 96 40)"/>
+          <line x1="96" y1="10" x2="96" y2="18" transform="rotate(90 96 40)"/>
+          <line x1="96" y1="10" x2="96" y2="18" transform="rotate(135 96 40)"/>
+          <line x1="96" y1="10" x2="96" y2="18" transform="rotate(180 96 40)"/>
+          <line x1="96" y1="10" x2="96" y2="18" transform="rotate(225 96 40)"/>
+          <line x1="96" y1="10" x2="96" y2="18" transform="rotate(270 96 40)"/>
+          <line x1="96" y1="10" x2="96" y2="18" transform="rotate(315 96 40)"/>
+        </g>
+      </svg>`,
+      parcialmenteNublado: `<svg viewBox="0 0 192 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="68" cy="30" r="18" fill="#FDE68A" opacity="0.3"/>
+        <circle cx="68" cy="30" r="12" fill="#FBBF24" opacity="0.85"/>
+        <g stroke="#F59E0B" stroke-width="2" stroke-linecap="round" opacity="0.8">
+          <line x1="68" y1="10" x2="68" y2="16" transform="rotate(0 68 30)"/>
+          <line x1="68" y1="10" x2="68" y2="16" transform="rotate(45 68 30)"/>
+          <line x1="68" y1="10" x2="68" y2="16" transform="rotate(90 68 30)"/>
+          <line x1="68" y1="10" x2="68" y2="16" transform="rotate(225 68 30)"/>
+          <line x1="68" y1="10" x2="68" y2="16" transform="rotate(270 68 30)"/>
+          <line x1="68" y1="10" x2="68" y2="16" transform="rotate(315 68 30)"/>
+        </g>
+        <ellipse cx="112" cy="59" rx="38" ry="11" fill="#E5E7EB"/>
+        <ellipse cx="96" cy="52" rx="13" ry="12" fill="#E5E7EB"/>
+        <ellipse cx="112" cy="47" rx="15" ry="13" fill="#E5E7EB"/>
+        <ellipse cx="128" cy="52" rx="12" ry="11" fill="#E5E7EB"/>
+      </svg>`,
+      nublado: `<svg viewBox="0 0 192 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="72" cy="52" rx="32" ry="10" fill="#D1D5DB"/>
+        <ellipse cx="58" cy="46" rx="12" ry="11" fill="#D1D5DB"/>
+        <ellipse cx="72" cy="41" rx="14" ry="12" fill="#D1D5DB"/>
+        <ellipse cx="86" cy="46" rx="11" ry="10" fill="#D1D5DB"/>
+        <ellipse cx="118" cy="56" rx="36" ry="11" fill="#E5E7EB"/>
+        <ellipse cx="102" cy="49" rx="13" ry="12" fill="#E5E7EB"/>
+        <ellipse cx="118" cy="44" rx="16" ry="13" fill="#E5E7EB"/>
+        <ellipse cx="134" cy="49" rx="12" ry="11" fill="#E5E7EB"/>
+      </svg>`,
+      nevoa: `<svg viewBox="0 0 192 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="28" y="18" width="136" height="5" rx="2.5" fill="#D1D5DB" opacity="0.8"/>
+        <rect x="18" y="32" width="156" height="5" rx="2.5" fill="#9CA3AF" opacity="0.6"/>
+        <rect x="32" y="46" width="128" height="5" rx="2.5" fill="#D1D5DB" opacity="0.8"/>
+        <rect x="22" y="60" width="148" height="5" rx="2.5" fill="#9CA3AF" opacity="0.5"/>
+      </svg>`,
+      chuva: `<svg viewBox="0 0 192 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="96" cy="40" rx="38" ry="10" fill="#9CA3AF"/>
+        <ellipse cx="80" cy="33" rx="12" ry="11" fill="#9CA3AF"/>
+        <ellipse cx="96" cy="28" rx="15" ry="12" fill="#9CA3AF"/>
+        <ellipse cx="112" cy="33" rx="11" ry="10" fill="#9CA3AF"/>
+        <g stroke="#60A5FA" stroke-width="2" stroke-linecap="round" opacity="0.85">
+          <line x1="72" y1="56" x2="68" y2="70"/>
+          <line x1="84" y1="54" x2="80" y2="68"/>
+          <line x1="96" y1="56" x2="92" y2="70"/>
+          <line x1="108" y1="54" x2="104" y2="68"/>
+          <line x1="120" y1="56" x2="116" y2="70"/>
+        </g>
+      </svg>`,
+      neve: `<svg viewBox="0 0 192 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="96" cy="38" rx="38" ry="10" fill="#D1D5DB"/>
+        <ellipse cx="80" cy="31" rx="12" ry="11" fill="#D1D5DB"/>
+        <ellipse cx="96" cy="26" rx="15" ry="12" fill="#D1D5DB"/>
+        <ellipse cx="112" cy="31" rx="11" ry="10" fill="#D1D5DB"/>
+        <g fill="#BFDBFE" opacity="0.95">
+          <circle cx="72" cy="55" r="3"/>
+          <circle cx="84" cy="63" r="2.5"/>
+          <circle cx="96" cy="56" r="3"/>
+          <circle cx="108" cy="64" r="2.5"/>
+          <circle cx="120" cy="55" r="3"/>
+          <circle cx="78" cy="70" r="2"/>
+          <circle cx="102" cy="70" r="2"/>
+        </g>
+      </svg>`,
+      tempestade: `<svg viewBox="0 0 192 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="96" cy="36" rx="40" ry="11" fill="#6B7280"/>
+        <ellipse cx="80" cy="29" rx="13" ry="12" fill="#6B7280"/>
+        <ellipse cx="96" cy="23" rx="16" ry="13" fill="#6B7280"/>
+        <ellipse cx="113" cy="29" rx="12" ry="11" fill="#6B7280"/>
+        <path d="M100,48 L89,62 L97,62 L91,77 L112,57 L102,57 Z" fill="#FCD34D"/>
+      </svg>`
+    };
+
+    function svgCondicao(wcode) {
+      if (wcode === 0) return SVGS_CONDICAO.limpo;
+      if (wcode <= 2) return SVGS_CONDICAO.parcialmenteNublado;
+      if (wcode === 3) return SVGS_CONDICAO.nublado;
+      if (wcode === 45 || wcode === 48) return SVGS_CONDICAO.nevoa;
+      if (wcode >= 71 && wcode <= 75) return SVGS_CONDICAO.neve;
+      if (wcode >= 95) return SVGS_CONDICAO.tempestade;
+      if (wcode >= 51) return SVGS_CONDICAO.chuva;
+      return SVGS_CONDICAO.nublado;
+    }
+
+    const DIRECOES_COMPLETAS = ['Norte', 'Nordeste', 'Leste', 'Sudeste', 'Sul', 'Sudoeste', 'Oeste', 'Noroeste'];
+
+    function direcaoVento(graus) {
+      return DIRECOES[Math.round(graus / 45) % 8];
+    }
+
+    function direcaoVentoCompleta(graus) {
+      return DIRECOES_COMPLETAS[Math.round(graus / 45) % 8];
+    }
+
+    function calcularRisco(temp, umidade, vento) {
+      let pontos = 0;
+      if (temp >= 35) pontos += 3; else if (temp >= 30) pontos += 2; else if (temp >= 25) pontos += 1;
+      if (umidade <= 20) pontos += 3; else if (umidade <= 35) pontos += 2; else if (umidade <= 50) pontos += 1;
+      if (vento >= 30) pontos += 2; else if (vento >= 15) pontos += 1;
+      const score = Math.round((pontos / 8) * 100);
+      if (pontos >= 7) return { nivel: 'Extremo', cor: '#dc2626', score, classe: 'alto' };
+      if (pontos >= 5) return { nivel: 'Alto',    cor: '#F97316', score, classe: 'alto' };
+      if (pontos >= 3) return { nivel: 'Médio',   cor: '#eab308', score, classe: 'med'  };
+      return              { nivel: 'Baixo',   cor: '#22c55e', score, classe: 'bai'  };
+    }
+
+    function gerarAlertas(c, d) {
+      const alertas = [];
+      const vento   = Math.round(c.wind_speed_10m);
+      const rajadas = Math.round(c.wind_gusts_10m ?? vento * 1.3);
+      const umidade = c.relative_humidity_2m;
+      const temp    = c.temperature_2m;
+      const wcode   = c.weather_code;
+
+      if (wcode >= 95)   alertas.push({ nivel: 'high', texto: 'Tempestade elétrica em curso',          sub: 'Risco de raios — principal causa de incêndios naturais' });
+      if (rajadas > 45)  alertas.push({ nivel: 'high', texto: `Rajadas de vento até ${rajadas} km/h`,  sub: 'Risco elevado de propagação de incêndios' });
+      else if (vento > 25) alertas.push({ nivel: 'med',  texto: `Vento moderado a forte: ${vento} km/h`, sub: 'Atenção à propagação de fogo' });
+      if (umidade < 20)  alertas.push({ nivel: 'high', texto: 'Umidade crítica abaixo de 20%',         sub: 'Vegetação muito seca — alto risco de incêndio' });
+      else if (umidade < 30) alertas.push({ nivel: 'med', texto: `Umidade baixa: ${umidade}%`,          sub: 'Condições desfavoráveis de umidade' });
+      if (temp > 38)     alertas.push({ nivel: 'high', texto: `Calor extremo: ${Math.round(temp)}°C`,  sub: 'Situação crítica de temperatura' });
+      else if (temp > 35) alertas.push({ nivel: 'med', texto: `Temperatura elevada: ${Math.round(temp)}°C`, sub: 'Calor intenso aumenta risco de incêndio' });
+      const semChuva = (d.precipitation_sum || []).slice(0, 5).every(v => (v ?? 0) < 1);
+      if (semChuva)      alertas.push({ nivel: 'med', texto: 'Sem chuva prevista nos próximos 5 dias', sub: 'Risco de ressecamento de vegetação' });
+      if (alertas.length === 0) alertas.push({ nivel: 'ok', texto: 'Sem alertas ativos no momento', sub: 'Condições meteorológicas dentro da normalidade' });
+      return alertas;
+    }
+
+    async function buscarDados(lat, lon) {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
+        `&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m,wind_direction_10m,uv_index,surface_pressure,wind_gusts_10m` +
+        `&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum,relative_humidity_2m_mean,wind_speed_10m_max` +
+        `&hourly=wind_speed_10m` +
+        `&timezone=America%2FSao_Paulo&forecast_days=7`;
+      console.log('[Meteo] URL:', url);
+      const resp = await fetch(url);
+      if (!resp.ok) {
+        const txt = await resp.text().catch(() => '');
+        throw new Error(`API ${resp.status}: ${txt}`);
+      }
+      const json = await resp.json();
+      console.log('[Meteo] Dados recebidos:', json);
+      return json;
+    }
+
+    async function reverseGeocodificar(lat, lon) {
+      try {
+        const url = `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`;
+        const resp = await fetch(url, { headers: { 'Accept-Language': 'pt-BR' } });
+        const data = await resp.json();
+        const cidade = data.address?.city || data.address?.town || data.address?.village || data.address?.county || 'Local atual';
+        const estado = data.address?.state_code || '';
+        return estado ? `${cidade}, ${estado}` : cidade;
+      } catch (e) {
+        return 'Local atual';
+      }
+    }
+
+    function atualizarNomeLocal(nome) {
+      const chip = document.getElementById('nomeLocalChip');
+      if (chip) chip.textContent = nome;
+      const card = document.getElementById('nomeLocalCard');
+      if (card) card.textContent = nome;
+      const badge = document.getElementById('tabSourceBadge');
+      if (badge && tabAtiva === 'atual') badge.textContent = nome;
+    }
+
+    function atualizarRosaVentos(direcao, velocidade) {
+      const seta = document.getElementById('rosaVentoSeta');
+      if (seta) seta.setAttribute('transform', `rotate(${Math.round(direcao) - 45}, 75, 75)`);
+      const dirLabel = document.getElementById('rosaVentoDirLabel');
+      if (dirLabel) dirLabel.textContent = direcaoVento(direcao);
+      const velLabel = document.getElementById('rosaVentoVelLabel');
+      if (velLabel) velLabel.textContent = `${velocidade} km/h`;
+      const descLabel = document.getElementById('rosaVentoDirDesc');
+      if (descLabel) descLabel.textContent = direcaoVentoCompleta(direcao);
+    }
+
+    function atualizarGraficoVento(dados) {
+      const W = 560, H = 108, padX = 24, padY = 12;
+      const iW = W - padX * 2, iH = H - padY - 20;
+      const maxV = Math.max(...dados, 1);
+
+      const pts = dados.map((v, i) => {
+        const x = Math.round(padX + (i / (dados.length - 1)) * iW);
+        const y = Math.round(padY + iH - (v / maxV) * iH);
+        return `${x},${y}`;
+      });
+
+      const polyline = document.querySelector('.wind-chart-svg polyline');
+      if (polyline) polyline.setAttribute('points', pts.join(' '));
+
+      const fillPath = document.querySelector('.wind-chart-svg path[fill="url(#windGrad)"]');
+      if (fillPath) {
+        const [x0] = pts[0].split(',');
+        const [xN] = pts[pts.length - 1].split(',');
+        fillPath.setAttribute('d', `M${pts.join(' L')} L${xN},${H} L${x0},${H} Z`);
+      }
+
+      const maxIdx = dados.indexOf(Math.max(...dados));
+      const [px, py] = pts[maxIdx].split(',');
+      document.querySelectorAll('.wind-chart-svg circle').forEach(c => {
+        c.setAttribute('cx', px);
+        c.setAttribute('cy', py);
+      });
+
+      const labels = document.querySelectorAll('.wind-chart-svg text[x="0"]');
+      if (labels.length >= 3) {
+        labels[0].textContent = Math.round(maxV);
+        labels[1].textContent = Math.round(maxV * 0.55);
+        labels[2].textContent = Math.round(maxV * 0.1);
+      }
+    }
+
+    function svgSetaFwi(up) {
+      return up
+        ? `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>`
+        : `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>`;
+    }
+
+    function set(id, val) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    }
+
+    document.querySelectorAll('.glass-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--mx', '50%');
+        card.style.setProperty('--my', '50%');
+      });
+    });
+
+    function atualizarPagina(dados) {
+      const c = dados.current;
+      const d = dados.daily;
+
+      // Horário de atualização
+      const agora = new Date();
+      const hhmm = agora.getHours().toString().padStart(2, '0') + ':' + agora.getMinutes().toString().padStart(2, '0');
+      const updateEl = document.querySelector('.card-update');
+      if (updateEl) updateEl.textContent = 'Atualizado às ' + hhmm;
+
+      // Imagem de condição atmosférica
+      const imgEl = document.getElementById('imagemCondicao');
+      if (imgEl) imgEl.innerHTML = svgCondicao(c.weather_code);
+
+      // KPIs principais
+      const temp    = c.temperature_2m;
+      const umid    = c.relative_humidity_2m;
+      const vento   = Math.round(c.wind_speed_10m);
+      const uv      = +(c.uv_index ?? 0);
+      const pressao = Math.round(c.surface_pressure ?? 1013);
+
+      set('kpiTemp',       Math.round(temp) + '°C');
+      set('kpiUmidade',    umid + '%');
+      set('kpiVento',      vento + ' km/h');
+      set('kpiVentoLabel', 'Vento ' + direcaoVento(c.wind_direction_10m));
+      set('kpiUV',         uv.toFixed(1));
+      set('kpiPressao',    pressao);
+
+      // Índice de Risco de Fogo (FWI)
+      const risco   = calcularRisco(temp, umid, vento);
+      const chuva7d = (d.precipitation_sum || []).reduce((a, b) => a + (b ?? 0), 0);
+
+      const fwiNivelEl = document.getElementById('fwiNivel');
+      if (fwiNivelEl) { fwiNivelEl.textContent = risco.nivel.toUpperCase(); fwiNivelEl.style.color = risco.cor; }
+      set('fwiScore', `FWI: ${risco.score} / 100`);
+      const fwiFillEl = document.getElementById('fwiFill');
+      if (fwiFillEl) { fwiFillEl.style.width = risco.score + '%'; fwiFillEl.style.background = risco.cor; }
+      const fwiMrkEl = document.getElementById('fwiMarker');
+      if (fwiMrkEl) fwiMrkEl.style.left = risco.score + '%';
+
+      const fwiStatTemp = document.getElementById('fwiStatTemp');
+      if (fwiStatTemp) { fwiStatTemp.className = `fwi-stat-val ${temp > 30 ? 'fwi-up' : 'fwi-down'}`; fwiStatTemp.innerHTML = Math.round(temp) + '°C ' + svgSetaFwi(temp > 30); }
+      const fwiStatUmid = document.getElementById('fwiStatUmid');
+      if (fwiStatUmid) { fwiStatUmid.className = `fwi-stat-val ${umid < 50 ? 'fwi-down' : 'fwi-up'}`; fwiStatUmid.innerHTML = umid + '% ' + svgSetaFwi(umid >= 50); }
+      const fwiStatVento = document.getElementById('fwiStatVento');
+      if (fwiStatVento) { fwiStatVento.className = `fwi-stat-val ${vento > 15 ? 'fwi-up' : 'fwi-down'}`; fwiStatVento.innerHTML = vento + ' km/h ' + svgSetaFwi(vento > 15); }
+      const fwiStatChuva = document.getElementById('fwiStatChuva');
+      if (fwiStatChuva) { fwiStatChuva.className = `fwi-stat-val ${chuva7d < 10 ? 'fwi-down' : 'fwi-up'}`; fwiStatChuva.innerHTML = chuva7d.toFixed(1) + ' mm ' + svgSetaFwi(chuva7d >= 10); }
+
+      // Alertas meteorológicos dinâmicos
+      const alertas = gerarAlertas(c, d);
+      const listaAlertasEl = document.getElementById('listaAlertas');
+      if (listaAlertasEl) {
+        listaAlertasEl.innerHTML = alertas.map(a => `
+          <div class="met-alert-item">
+            <div class="met-alert-dot met-alert-dot--${a.nivel}"></div>
+            <div class="met-alert-body">
+              <div class="met-alert-text">${a.texto}</div>
+              <div class="met-alert-sub">${a.sub}</div>
+            </div>
+          </div>`).join('');
+      }
+
+      // Previsão 7 dias
+      const dayCards = document.querySelectorAll('.day-card');
+      for (let i = 0; i < Math.min(dayCards.length, d.time.length); i++) {
+        const card = dayCards[i];
+        const data = new Date(d.time[i] + 'T12:00:00');
+        const diaSemana = i === 0 ? 'Hoje' : DIAS_SEMANA[data.getDay()];
+
+        const dayNameEl = card.querySelector('.day-name');
+        if (dayNameEl) dayNameEl.textContent = diaSemana;
+        const maxEl = card.querySelector('.day-max');
+        if (maxEl) maxEl.textContent = Math.round(d.temperature_2m_max[i]) + '°';
+        const minEl = card.querySelector('.day-min');
+        if (minEl) minEl.textContent = Math.round(d.temperature_2m_min[i]) + '°';
+        const windEl = card.querySelector('.day-wind');
+        if (windEl) windEl.textContent = Math.round(d.wind_speed_10m_max[i]) + ' km/h';
+
+        // Ícone substituído por emoji na primeira chamada
+        let iconEl = card.querySelector('.day-icon-emoji');
+        if (!iconEl) {
+          const svg = card.querySelector(':scope > svg');
+          if (svg) {
+            const span = document.createElement('span');
+            span.className = 'day-icon-emoji';
+            span.style.cssText = 'font-size:24px;display:block;text-align:center;margin:2px 0;line-height:1';
+            svg.replaceWith(span);
+            iconEl = span;
+          }
+        }
+        if (iconEl) iconEl.textContent = ICONES_TEMPO[d.weather_code[i]] || '🌡️';
+
+        // Precipitação em mm
+        const rainEl = card.querySelector('.day-rain');
+        if (rainEl) {
+          const mm = (d.precipitation_sum[i] ?? 0).toFixed(1);
+          const svgRain = rainEl.querySelector('svg');
+          rainEl.innerHTML = '';
+          if (svgRain) rainEl.appendChild(svgRain);
+          rainEl.append(' ' + mm + ' mm');
+        }
+
+        // Badge de risco calculado dinamicamente
+        const riskEl = card.querySelector('.risk-badge');
+        if (riskEl) {
+          const r = calcularRisco(d.temperature_2m_max[i], d.relative_humidity_2m_mean?.[i] ?? 50, d.wind_speed_10m_max[i]);
+          riskEl.textContent = r.nivel.toUpperCase().substring(0, 3);
+          riskEl.className = `risk-badge risk-${r.classe}`;
+        }
+      }
+
+      // Rosa dos ventos
+      atualizarRosaVentos(c.wind_direction_10m, vento);
+
+      // Gráfico de vento 24h com dados horários reais
+      if (dados.hourly?.wind_speed_10m?.length) {
+        atualizarGraficoVento(dados.hourly.wind_speed_10m.slice(0, 24));
+      }
+    }
+
+    async function obterCoordenadas() {
+      if (navigator.geolocation) {
+        try {
+          const pos = await new Promise((res, rej) =>
+            navigator.geolocation.getCurrentPosition(res, rej, { timeout: 6000 }));
+          return [pos.coords.latitude, pos.coords.longitude];
+        } catch (e) {}
+      }
+      try {
+        const resp = await fetch('https://ipapi.co/json/');
+        const data = await resp.json();
+        if (data.latitude && data.longitude) return [data.latitude, data.longitude];
+      } catch (e) {}
+      return [-15.7942, -47.8822];
+    }
+
+    async function inicializar() {
+      const [lat, lon] = await obterCoordenadas();
+      console.log('[Meteo] Coordenadas:', lat, lon);
+      const nomeLocal = await reverseGeocodificar(lat, lon);
+      console.log('[Meteo] Local:', nomeLocal);
+      atualizarNomeLocal(nomeLocal);
+      try {
+        const dados = await buscarDados(lat, lon);
+        atualizarPagina(dados);
+      } catch (e) {
+        console.error('[Meteo] Erro:', e.message);
+      }
+    }
+
+    const API_PORTS_MET = [3000, 3001];
+    let tabAtiva = 'atual';
+
+    async function buscarPropriedade() {
+      for (const port of API_PORTS_MET) {
+        try {
+          const resp = await fetch(`http://localhost:${port}/locais`);
+          if (!resp.ok) continue;
+          const locais = await resp.json();
+          let userId = null;
+          try {
+            const uc = sessionStorage.getItem('usuarioCorrente');
+            if (uc) userId = JSON.parse(uc).id;
+          } catch (e) {}
+          const propriedade = userId
+            ? locais.find(l => Number(l.usuarioId) === Number(userId))
+            : null;
+          return propriedade || locais[0] || null;
+        } catch (e) {}
+      }
+      return null;
+    }
+
+    async function switchTab(tab) {
+      tabAtiva = tab;
+      document.getElementById('tabAtual').classList.toggle('active', tab === 'atual');
+      document.getElementById('tabCadastrado').classList.toggle('active', tab === 'cadastrado');
+      const badge = document.getElementById('tabSourceBadge');
+
+      if (tab === 'atual') {
+        if (badge) badge.textContent = 'Detectando localização…';
+        await inicializar();
+      } else {
+        if (badge) badge.textContent = 'Buscando propriedade…';
+        const propriedade = await buscarPropriedade();
+        if (!propriedade) {
+          if (badge) badge.textContent = 'Propriedade não encontrada — configure em Minha Propriedade';
+          return;
+        }
+        const nomeExibicao = `${propriedade.nome} — ${propriedade.cidade}, ${propriedade.estado}`;
+        if (badge) badge.textContent = nomeExibicao;
+        atualizarNomeLocal(propriedade.nome);
+        try {
+          const dados = await buscarDados(propriedade.lat, propriedade.lng);
+          atualizarPagina(dados);
+        } catch (e) {
+          console.error('[Meteo] Erro ao buscar dados da propriedade:', e.message);
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      inicializar();
+      setInterval(inicializar, 10 * 60 * 1000);
+    });
+  </script>
+
+</body>
+</html>

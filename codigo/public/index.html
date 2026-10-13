@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flamer | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/js/login.js"></script>
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+          <path d="M12 8c-1.5 2.5-3 4.5-3 6.5a3 3 0 006 0C15 12.5 13.5 10.5 12 8z" fill="#FDE68A"/>
+        </svg>
+      </div>
+      <span class="brand-name">Flamer</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html" class="nav-item active" style="--i:0">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+          <path d="M9 21V12h6v9"/>
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="modulos/dashboard/index.html" class="nav-item" style="--i:1">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+        </svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="modulos/focos_ativos/index.html" class="nav-item" style="--i:2">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <span>Focos Ativos</span>
+      </a>
+      <a href="modulos/reportar_ocorrencia/index.html" class="nav-item" style="--i:3">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/>
+          <path d="M14 17h6M17 14v6"/>
+        </svg>
+        <span>Reportar</span>
+      </a>
+      <a href="modulos/qualidade_ar/index.html" class="nav-item" style="--i:4">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+          <circle cx="7" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>Qualidade do Ar</span>
+      </a>
+      <a href="modulos/minha_propriedade/index.html" class="nav-item" style="--i:5">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        <span>Minha Propriedade</span>
+      </a>
+      <a href="modulos/relatorios/index.html" class="nav-item" style="--i:6">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M9 17H7a4 4 0 010-8h2"/>
+          <path d="M15 7h2a4 4 0 010 8h-2"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+        <span>Relatórios</span>
+      </a>
+      <a href="modulos/historico_queimadas/index.html" class="nav-item" style="--i:7">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Histórico</span>
+      </a>
+      <a href="modulos/alertas/index.html" class="nav-item" style="--i:8">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 01-3.46 0"/>
+        </svg>
+        <span>Alertas</span>
+      </a>
+      <a href="modulos/meteorologia/meteorologia.html" class="nav-item" style="--i:9">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+        </svg>
+        <span>Meteorologia</span>
+      </a>
+      <a href="modulos/contatos_de_emergência/emergencia.html" class="nav-item" style="--i:10">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.72 19.79 19.79 0 01.75 1.1 2 2 0 012.73.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.02 6.02l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        <span>Contatos</span>
+      </a>
+      <a href="modulos/config_da_conta/index.html" class="nav-item" style="--i:11">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>Conta</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+
+      <div class="sidebar-user">
+      <div class="user-avatar">JP</div>
+      <span class="user-name">João Pedro</span>
+    </div>
+
+    </div></aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="topbar-greeting">
+        <span class="topbar-title">Olá, João Pedro</span>
+        <span class="topbar-sub" id="homeLocalSub">Detectando localização…</span>
+      </div>
+      <div class="topbar-controls">
+        <div class="alert-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          3 alertas críticos
+        </div>
+        <button class="topbar-bell" aria-label="Alertas">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 01-3.46 0"/>
+          </svg>
+          <span class="bell-badge">3</span>
+        </button>
+        <div class="topbar-avatar">JP</div>
+      </div>
+    </header>
+
+    <div class="loc-tabs">
+      <button class="loc-tab active" id="homeTabAtual" onclick="switchTabHome('atual')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        Localização Atual
+      </button>
+      <div class="loc-tab-sep"></div>
+      <button class="loc-tab" id="homeTabCadastrado" onclick="switchTabHome('cadastrado')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        Minha Propriedade
+      </button>
+      <span class="loc-tab-badge" id="homeTabBadge">Detectando localização…</span>
+    </div>
+
+    <div class="content-area">
+
+      
+      <div class="situation-card">
+        <div class="situation-left">
+          <div class="situation-label">Situação Atual</div>
+          <h2 class="situation-title" id="situationLocal">Cerrado Central</h2>
+          <div class="situation-meta">
+            <span class="meta-item meta-item--danger" id="situationRiskMeta">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/>
+              </svg>
+              Risco <span id="situationRiskMetaLabel">ALTO</span>
+            </span>
+            <span class="meta-sep">·</span>
+            <span class="meta-item" id="situationTemp">--°C</span>
+            <span class="meta-sep">·</span>
+            <span class="meta-item" id="situationHumidity">Umidade --%</span>
+          </div>
+          <div class="situation-actions">
+            <a href="modulos/reportar_ocorrencia/index.html" class="btn-fire">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+              </svg>
+              Reportar Ocorrência
+            </a>
+            <a href="modulos/focos_ativos/index.html" class="btn-outline">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><path d="M8 2v16M16 6v16"/>
+              </svg>
+              Ver Mapa Completo
+            </a>
+          </div>
+        </div>
+        <div class="risk-badge">
+          <div class="risk-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+              <path d="M12 8c-1 1.5-2 3-2 4.5a2 2 0 004 0C14 11 13 9.5 12 8z" fill="#FDE68A"/>
+            </svg>
+          </div>
+          <span class="risk-level" id="riskLevel">ALTO</span>
+          <span class="risk-label">Índice de Risco</span>
+          <span class="risk-time" id="riskTime">Atualizado 14:32</span>
+        </div>
+      </div>
+
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-wrap stat-icon-wrap--fire">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8">
+              <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/>
+              <path d="M12 8c-1 1.5-2 3-2 4.5a2 2 0 004 0C14 11 13 9.5 12 8z"/>
+            </svg>
+          </div>
+          <div class="stat-value">12</div>
+          <div class="stat-label">Focos Ativos</div>
+          <span class="stat-tag stat-tag--red">+3 hoje</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-wrap stat-icon-wrap--orange">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.8">
+              <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+            </svg>
+          </div>
+          <div class="stat-value">IQA <span>87</span></div>
+          <div class="stat-label">Qualidade do Ar</div>
+          <span class="stat-tag stat-tag--orange">Moderado</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-wrap stat-icon-wrap--neutral">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6861" stroke-width="1.8">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <div class="stat-value">4</div>
+          <div class="stat-label">Minhas Propriedades</div>
+          <span class="stat-tag stat-tag--orange">1 em alerta</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-wrap stat-icon-wrap--fire">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="1.8">
+              <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 01-3.46 0"/>
+            </svg>
+          </div>
+          <div class="stat-value">3</div>
+          <div class="stat-label">Alertas Não Lidos</div>
+          <span class="stat-tag stat-tag--red">2 críticos</span>
+        </div>
+      </div>
+
+      
+      <div class="bottom-grid">
+        <div class="map-card">
+          <div class="map-placeholder" id="homeMap"></div>
+          <div class="map-footer">
+            <span class="map-footer-title">Mapa de Focos – Cerrado Central</span>
+            <a href="modulos/focos_ativos/index.html" class="map-footer-link">
+              Abrir mapa completo
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="right-panel">
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2">
+                <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 01-3.46 0"/>
+              </svg>
+              Alertas Recentes
+            </div>
+            <div class="panel-row">
+              <span class="panel-dot" style="background:#DC2626"></span>
+              Foco detectado – Setor A3
+            </div>
+            <div class="panel-row">
+              <span class="panel-dot" style="background:#F97316"></span>
+              Qualidade do ar degradada
+            </div>
+            <div class="panel-row">
+              <span class="panel-dot" style="background:#9CA3AF"></span>
+              Vento forte previsto 16h
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="panel-card-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6B6861" stroke-width="2">
+                <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+              </svg>
+              Previsão Rápida
+            </div>
+            <div class="panel-row wx">
+              <span class="wx-day">Hoje</span>
+              <span id="wxDay0">--°C</span>
+            </div>
+            <div class="panel-row wx">
+              <span class="wx-day">Amanhã</span>
+              <span id="wxDay1">--°C</span>
+            </div>
+            <div class="panel-row wx">
+              <span class="wx-day" id="wxDay2Name">--</span>
+              <span id="wxDay2">--°C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <script>
+    document.querySelectorAll('.situation-card, .stat-card, .map-card, .panel-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--mx', '50%');
+        card.style.setProperty('--my', '50%');
+      });
+    });
+  </script>
+
+  <script>
+    async function obterCoordenadas() {
+      if (navigator.geolocation) {
+        try {
+          const pos = await new Promise((res, rej) =>
+            navigator.geolocation.getCurrentPosition(res, rej, { timeout: 6000 }));
+          return [pos.coords.latitude, pos.coords.longitude];
+        } catch (e) {}
+      }
+      try {
+        const resp = await fetch('https://ipapi.co/json/');
+        const data = await resp.json();
+        if (data.latitude && data.longitude) return [data.latitude, data.longitude];
+      } catch (e) {}
+      return [-15.7942, -47.8822];
+    }
+
+    async function reverseGeocodificar(lat, lon) {
+      try {
+        const url = `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`;
+        const resp = await fetch(url, { headers: { 'Accept-Language': 'pt-BR' } });
+        const data = await resp.json();
+        const cidade = data.address?.city || data.address?.town || data.address?.village || data.address?.county || 'Local atual';
+        const estado = data.address?.state_code || '';
+        return estado ? `${cidade} · ${estado}` : cidade;
+      } catch (e) {
+        return 'Local atual';
+      }
+    }
+
+    async function buscarClima(lat, lon) {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
+        `&current=temperature_2m,relative_humidity_2m,wind_speed_10m` +
+        `&daily=temperature_2m_max,precipitation_probability_max,wind_speed_10m_max` +
+        `&timezone=America%2FSao_Paulo&forecast_days=3`;
+      const resp = await fetch(url);
+      const data = await resp.json();
+      return { current: data.current, daily: data.daily };
+    }
+
+    function calcularRisco(temp, umidade, vento) {
+      let pontos = 0;
+      if (temp >= 35) pontos += 3; else if (temp >= 30) pontos += 2; else if (temp >= 25) pontos += 1;
+      if (umidade <= 20) pontos += 3; else if (umidade <= 35) pontos += 2; else if (umidade <= 50) pontos += 1;
+      if (vento >= 30) pontos += 2; else if (vento >= 15) pontos += 1;
+      if (pontos >= 7) return { nivel: 'EXTREMO', cor: '#dc2626' };
+      if (pontos >= 5) return { nivel: 'ALTO',    cor: '#F97316' };
+      if (pontos >= 3) return { nivel: 'MÉDIO',   cor: '#eab308' };
+      return              { nivel: 'BAIXO',   cor: '#22c55e' };
+    }
+
+    async function obterCoordenadasCadastradasHome() {
+      let usuarioId = 2;
+      try {
+        const sessao = sessionStorage.getItem('usuarioCorrente');
+        if (sessao) {
+          const u = JSON.parse(sessao);
+          if (u.id) usuarioId = u.id;
+        }
+      } catch (e) {}
+      try {
+        const resp = await fetch(`http://localhost:3001/locais?usuarioId=${usuarioId}`);
+        if (!resp.ok) throw new Error();
+        const locais = await resp.json();
+        if (locais.length > 0) {
+          const l = locais[0];
+          return { lat: l.lat, lon: l.lng, nome: `${l.nome} — ${l.cidade}/${l.estado}` };
+        }
+      } catch (e) {}
+      return { lat: -18.9186, lon: -48.2772, nome: 'Fazenda do João — Uberlândia/MG' };
+    }
+
+    async function atualizarHome(lat, lon, nomeLocal) {
+      const sub       = document.getElementById('homeLocalSub');
+      const situation = document.getElementById('situationLocal');
+      const tempEl    = document.getElementById('situationTemp');
+      const humEl     = document.getElementById('situationHumidity');
+      const riskMeta  = document.getElementById('situationRiskMeta');
+      const riskLabel = document.getElementById('situationRiskMetaLabel');
+      const riskLevel = document.getElementById('riskLevel');
+      const riskTime  = document.getElementById('riskTime');
+
+      if (sub)       sub.textContent       = nomeLocal;
+      if (situation) situation.textContent = nomeLocal;
+
+      const clima = await buscarClima(lat, lon).catch(() => null);
+
+      const badge = document.getElementById('homeTabBadge');
+      if (badge) { badge.className = 'loc-tab-badge'; badge.textContent = nomeLocal; }
+
+      if (clima) {
+        const c       = clima.current;
+        const d       = clima.daily;
+        const temp    = Math.round(c.temperature_2m);
+        const umidade = c.relative_humidity_2m;
+        const vento   = Math.round(c.wind_speed_10m);
+        const risco   = calcularRisco(temp, umidade, vento);
+        const agora   = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+
+        if (tempEl)    tempEl.textContent    = `${temp}°C`;
+        if (humEl)     humEl.textContent     = `Umidade ${umidade}%`;
+        if (riskLabel) riskLabel.textContent = risco.nivel;
+        if (riskMeta)  riskMeta.style.color  = risco.cor;
+        if (riskLevel) riskLevel.textContent = risco.nivel;
+        if (riskTime)  riskTime.textContent  = `Atualizado ${agora}`;
+
+        if (d) {
+          const DIAS = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+          const hoje = new Date();
+          const fmt0 = `${Math.round(d.temperature_2m_max[0])}°C · Vento ${Math.round(d.wind_speed_10m_max[0])} km/h`;
+          const fmt1 = `${Math.round(d.temperature_2m_max[1])}°C · Chuva ${d.precipitation_probability_max[1] ?? 0}%`;
+          const fmt2 = `${Math.round(d.temperature_2m_max[2])}°C · Chuva ${d.precipitation_probability_max[2] ?? 0}%`;
+          const dia2Nome = DIAS[(hoje.getDay() + 2) % 7];
+          const el0 = document.getElementById('wxDay0');
+          const el1 = document.getElementById('wxDay1');
+          const el2 = document.getElementById('wxDay2');
+          const el2n = document.getElementById('wxDay2Name');
+          if (el0)  el0.textContent  = fmt0;
+          if (el1)  el1.textContent  = fmt1;
+          if (el2)  el2.textContent  = fmt2;
+          if (el2n) el2n.textContent = dia2Nome;
+        }
+      }
+    }
+
+    let _tabAtivaHome = 'atual';
+    let _intervalHome = null;
+
+    async function switchTabHome(tab) {
+      _tabAtivaHome = tab;
+      document.getElementById('homeTabAtual').classList.toggle('active', tab === 'atual');
+      document.getElementById('homeTabCadastrado').classList.toggle('active', tab === 'cadastrado');
+
+      const badge = document.getElementById('homeTabBadge');
+      if (badge) { badge.className = 'loc-tab-loading'; badge.textContent = ''; }
+
+      let lat, lon, nomeLocal;
+      if (tab === 'cadastrado') {
+        const lc = await obterCoordenadasCadastradasHome();
+        lat = lc.lat; lon = lc.lon; nomeLocal = lc.nome;
+      } else {
+        [lat, lon] = await obterCoordenadas();
+        nomeLocal  = await reverseGeocodificar(lat, lon);
+      }
+
+      await atualizarHome(lat, lon, nomeLocal);
+
+      if (_intervalHome) clearInterval(_intervalHome);
+      _intervalHome = setInterval(async () => {
+        let lt, ln, nm;
+        if (_tabAtivaHome === 'cadastrado') {
+          const lc = await obterCoordenadasCadastradasHome();
+          lt = lc.lat; ln = lc.lon; nm = lc.nome;
+        } else {
+          [lt, ln] = await obterCoordenadas();
+          nm = await reverseGeocodificar(lt, ln);
+        }
+        atualizarHome(lt, ln, nm);
+      }, 10 * 60 * 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => switchTabHome('atual'));
+  </script>
+
+  <script src="assets/js/home-data.js"></script>
+</body>
+</html>

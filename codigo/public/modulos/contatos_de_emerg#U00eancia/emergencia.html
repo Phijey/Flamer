@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flamer | Contatos das Autoridades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-card">
+    <div class="login-brand">
+      <div class="login-brand-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+          <path d="M12 8c-1.5 2.5-3 4.5-3 6.5a3 3 0 006 0C15 12.5 13.5 10.5 12 8z" fill="#FDE68A"/>
+        </svg>
+      </div>
+      <span class="login-brand-name">Flamer</span>
+    </div>
+
+    <div class="login-title">Acesso Administrativo</div>
+    <div class="login-subtitle">Insira suas credenciais para gerenciar os contatos das autoridades.</div>
+
+    <form id="loginForm" autocomplete="off">
+      <div class="login-field">
+        <label for="adminUser">Usuário</label>
+        <input type="text" id="adminUser" placeholder="admin" autocomplete="username">
+      </div>
+      <div class="login-field">
+        <label for="adminPass">Senha</label>
+        <input type="password" id="adminPass" placeholder="••••••••" autocomplete="current-password">
+      </div>
+
+      <div class="login-error" id="loginError">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        Usuário ou senha incorretos.
+      </div>
+
+      <button type="submit" class="btn-login">Entrar</button>
+    </form>
+
+    <div class="login-hint">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0110 0v4"/>
+      </svg>
+      Área restrita — somente administradores
+    </div>
+  </div>
+</div>
+
+<div class="app-shell" id="appShell" style="display:none">
+
+  
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z" fill="#F97316"/>
+          <path d="M12 8c-1.5 2.5-3 4.5-3 6.5a3 3 0 006 0C15 12.5 13.5 10.5 12 8z" fill="#FDE68A"/>
+        </svg>
+      </div>
+      <span class="brand-name">Flamer</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="../../index.html" class="nav-item" style="--i:0">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+          <path d="M9 21V12h6v9"/>
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="../dashboard/index.html" class="nav-item" style="--i:1">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+        </svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="../focos_ativos/index.html" class="nav-item" style="--i:2">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M12 2C8 2 4 5.5 4 10c0 5.5 8 12 8 12s8-6.5 8-12c0-4.5-4-8-8-8z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        <span>Focos Ativos</span>
+      </a>
+      <a href="../reportar_ocorrencia/index.html" class="nav-item" style="--i:3">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/>
+          <path d="M14 17h6M17 14v6"/>
+        </svg>
+        <span>Reportar</span>
+      </a>
+      <a href="../qualidade_ar/index.html" class="nav-item" style="--i:4">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+          <circle cx="7" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>Qualidade do Ar</span>
+      </a>
+      <a href="../minha_propriedade/index.html" class="nav-item" style="--i:5">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        <span>Minha Propriedade</span>
+      </a>
+      <a href="../relatorios/index.html" class="nav-item" style="--i:6">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M9 17H7a4 4 0 010-8h2"/>
+          <path d="M15 7h2a4 4 0 010 8h-2"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+        <span>Relatórios</span>
+      </a>
+      <a href="../historico_queimadas/index.html" class="nav-item" style="--i:7">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Histórico</span>
+      </a>
+      <a href="../alertas/index.html" class="nav-item" style="--i:8">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 01-3.46 0"/>
+        </svg>
+        <span>Alertas</span>
+      </a>
+      <a href="../meteorologia/meteorologia.html" class="nav-item" style="--i:9">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+        </svg>
+        <span>Meteorologia</span>
+      </a>
+      <a href="index.html" class="nav-item active" style="--i:10">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.72 19.79 19.79 0 01.75 1.1 2 2 0 012.73.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.02 6.02l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        <span>Contatos de emergência</span>
+      </a>
+      <a href="../config_da_conta/index.html" class="nav-item" style="--i:11">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>Conta</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="user-avatar">AD</div>
+        <span class="user-name">Administrador</span>
+      </div>
+    </div>
+  </aside>
+
+  
+  <div class="main-area">
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="topbar-title">Contatos das Autoridades</span>
+        <span class="topbar-sub">Gestão de contatos de emergência</span>
+      </div>
+      <div class="topbar-right">
+        <div class="admin-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Admin
+        </div>
+        <button class="btn-logout" onclick="logout()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Sair
+        </button>
+      </div>
+    </header>
+
+    <div class="content-area">
+      <div class="page-header">
+        <div class="page-header-left">
+          <span class="page-label">Administração</span>
+          <h1 class="page-title">Contatos das Autoridades</h1>
+        </div>
+        <button class="btn-add" onclick="openAddModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          Adicionar Contato
+        </button>
+      </div>
+
+      <div class="contacts-grid" id="contactsGrid">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-card">
+    <div class="modal-header">
+      <span class="modal-title" id="modalTitle">Editar Contato</span>
+      <button class="btn-close" onclick="closeModal()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="editingId">
+      <div class="modal-field">
+        <label>Nome da autoridade</label>
+        <input type="text" id="fieldName" placeholder="Ex: Corpo de Bombeiros">
+      </div>
+      <div class="modal-field">
+        <label>Telefone principal</label>
+        <input type="tel" id="fieldPhone" placeholder="Ex: (65) 3616-2100">
+      </div>
+      <div class="modal-field">
+        <label>Telefone de emergência</label>
+        <input type="tel" id="fieldEmergency" placeholder="Ex: 193">
+      </div>
+      <div class="modal-field">
+        <label>E-mail</label>
+        <input type="email" id="fieldEmail" placeholder="Ex: contato@bombeiros.mt.gov.br">
+      </div>
+      <div class="modal-field">
+        <label>Endereço</label>
+        <textarea id="fieldAddress" rows="2" placeholder="Ex: Rua das Acácias, 123 – Centro, Cuiabá – MT"></textarea>
+      </div>
+      <div class="modal-field">
+        <label>Horário de atendimento</label>
+        <input type="text" id="fieldHours" placeholder="Ex: 24 horas / Seg–Sex, 08h–18h">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="btn-save" onclick="saveContact()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<script src="../../assets/js/login.js"></script>
+<script>
+  /* ── CREDENCIAIS ─────────────────────────────────────── */
+  const ADMIN_USER = 'admin';
+  const ADMIN_PASS = 'flamer2024';
+
+  /* ── DADOS PADRÃO ────────────────────────────────────── */
+  const DEFAULT_CONTACTS = [
+    {
+      id: 1,
+      name: 'Corpo de Bombeiros',
+      type: 'bombeiros',
+      emergency: '193',
+      email: 'cbm@bombeiros.mt.gov.br',
+      hours: '24 horas'
+    },
+    {
+      id: 2,
+      name: 'Polícia Militar',
+      type: 'pm',
+      emergency: '190',
+      email: 'pm@pm.mt.gov.br',
+      hours: '24 horas'
+    },
+    {
+      id: 3,
+      name: 'Polícia Militar Ambiental',
+      type: 'pma',
+      emergency: '190',
+      email: 'pma@pm.mt.gov.br',
+      hours: '24 horas'
+    },
+    {
+      id: 4,
+      name: 'IBAMA',
+      type: 'ibama',
+      emergency: '0800 618 080',
+      email: 'ibama.mt@ibama.gov.br',
+      hours: 'Seg–Sex, 08h–17h'
+    },
+    {
+      id: 5,
+      name: 'Prefeitura Municipal',
+      type: 'prefeitura',
+      emergency: '156',
+      email: 'ouvidoria@cuiaba.mt.gov.br',
+      hours: 'Seg–Sex, 08h–18h'
+    }
+  ];
+
+  /* ── ICONS POR TIPO ──────────────────────────────────── */
+  const ICONS = {
+    bombeiros: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="1.8">
+      <path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/>
+      <path d="M12 8c-1 1.5-2 3-2 4.5a2 2 0 004 0C14 11 13 9.5 12 8z"/>
+    </svg>`,
+    pm: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>`,
+    pma: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.8">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="M8 12l2 2 4-4"/>
+    </svg>`,
+    ibama: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="1.8">
+      <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+      <path d="M9 22V12h6v10"/>
+    </svg>`,
+    prefeitura: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="1.8">
+      <rect x="3" y="10" width="18" height="11" rx="1"/>
+      <path d="M3 10l9-7 9 7"/>
+      <line x1="12" y1="10" x2="12" y2="21"/>
+      <line x1="3" y1="15" x2="21" y2="15"/>
+    </svg>`
+  };
+
+  const TAG_LABELS = {
+    bombeiros: 'Bombeiros',
+    pm: 'Pol. Militar',
+    pma: 'Pol. Ambiental',
+    ibama: 'IBAMA',
+    prefeitura: 'Prefeitura'
+  };
+
+  /* ── ESTADO ──────────────────────────────────────────── */
+  let contacts = [];
+  let nextId = 10;
+
+  async function loadContacts() {
+    try {
+      const dados = await fetchFromApi('contatos_emergencia');
+      contacts = dados.map(c => ({
+        id: c.id,
+        name: c.nome,
+        type: c.tipo || 'prefeitura',
+        emergency: c.telefone || c.emergency || '',
+        phone: c.telefone_secundario || c.phone || '',
+        email: c.email || '',
+        address: c.endereco || c.address || '',
+        hours: c.horario || c.hours || '24 horas'
+      }));
+      nextId = contacts.reduce((m, c) => Math.max(m, Number(c.id) || 0), 0) + 1;
+    } catch (e) {
+      const stored = localStorage.getItem('flamer_contacts');
+      contacts = stored ? JSON.parse(stored) : JSON.parse(JSON.stringify(DEFAULT_CONTACTS));
+      nextId = contacts.reduce((m, c) => Math.max(m, c.id), 0) + 1;
+    }
+    renderContacts();
+  }
+
+  function saveContacts() {
+    localStorage.setItem('flamer_contacts', JSON.stringify(contacts));
+  }
+
+  /* ── RENDER ──────────────────────────────────────────── */
+  function renderContacts() {
+    const grid = document.getElementById('contactsGrid');
+    grid.innerHTML = contacts.map(c => `
+      <div class="contact-card"
+           onmousemove="glow(this,event)"
+           onmouseleave="resetGlow(this)">
+        <div class="card-header">
+          <div class="authority-icon authority-icon--${c.type}">
+            ${ICONS[c.type] || ICONS.prefeitura}
+          </div>
+          <div class="authority-info">
+            <div class="authority-name">${escHtml(c.name)}</div>
+            <span class="authority-tag tag--${c.type}">${TAG_LABELS[c.type] || c.type}</span>
+          </div>
+          <button class="btn-edit" onclick="openEditModal(${c.id})" title="Editar contato">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="contact-fields">
+          ${c.emergency ? `
+          <div class="contact-row">
+            <svg class="contact-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <div class="contact-row-content">
+              <div class="contact-row-label">Emergência</div>
+              <div class="contact-row-value"><a href="tel:${escHtml(c.emergency)}">${escHtml(c.emergency)}</a></div>
+            </div>
+          </div>` : ''}
+
+          ${c.phone ? `
+          <div class="contact-row">
+            <svg class="contact-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 9.72 19.79 19.79 0 01.75 1.1 2 2 0 012.73.12h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.02 6.02l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <div class="contact-row-content">
+              <div class="contact-row-label">Telefone</div>
+              <div class="contact-row-value"><a href="tel:${escHtml(c.phone)}">${escHtml(c.phone)}</a></div>
+            </div>
+          </div>` : ''}
+
+          ${c.email ? `
+          <div class="contact-row">
+            <svg class="contact-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <div class="contact-row-content">
+              <div class="contact-row-label">E-mail</div>
+              <div class="contact-row-value"><a href="mailto:${escHtml(c.email)}">${escHtml(c.email)}</a></div>
+            </div>
+          </div>` : ''}
+
+          ${c.address ? `
+          <div class="contact-row">
+            <svg class="contact-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div class="contact-row-content">
+              <div class="contact-row-label">Endereço</div>
+              <div class="contact-row-value">${escHtml(c.address)}</div>
+            </div>
+          </div>` : ''}
+
+          ${c.hours ? `
+          <div class="contact-row">
+            <svg class="contact-row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <div class="contact-row-content">
+              <div class="contact-row-label">Atendimento</div>
+              <div class="contact-row-value">${escHtml(c.hours)}</div>
+            </div>
+          </div>` : ''}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  /* ── MODAL ───────────────────────────────────────────── */
+  function openEditModal(id) {
+    const c = contacts.find(x => x.id === id);
+    if (!c) return;
+    document.getElementById('modalTitle').textContent = 'Editar Contato';
+    document.getElementById('editingId').value = id;
+    document.getElementById('fieldName').value = c.name;
+    document.getElementById('fieldPhone').value = c.phone || '';
+    document.getElementById('fieldEmergency').value = c.emergency || '';
+    document.getElementById('fieldEmail').value = c.email || '';
+    document.getElementById('fieldAddress').value = c.address || '';
+    document.getElementById('fieldHours').value = c.hours || '';
+    document.getElementById('fieldName').disabled = isDefaultContact(id);
+    document.getElementById('modalBackdrop').classList.add('open');
+  }
+
+  function openAddModal() {
+    document.getElementById('modalTitle').textContent = 'Adicionar Contato';
+    document.getElementById('editingId').value = '';
+    ['fieldName','fieldPhone','fieldEmergency','fieldEmail','fieldAddress','fieldHours']
+      .forEach(id => { document.getElementById(id).value = ''; document.getElementById(id).disabled = false; });
+    document.getElementById('modalBackdrop').classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('modalBackdrop').classList.remove('open');
+  }
+
+  function isDefaultContact(id) {
+    return DEFAULT_CONTACTS.some(c => c.id === id);
+  }
+
+  function saveContact() {
+    const id = document.getElementById('editingId').value;
+    const name    = document.getElementById('fieldName').value.trim();
+    const phone   = document.getElementById('fieldPhone').value.trim();
+    const emerg   = document.getElementById('fieldEmergency').value.trim();
+    const email   = document.getElementById('fieldEmail').value.trim();
+    const address = document.getElementById('fieldAddress').value.trim();
+    const hours   = document.getElementById('fieldHours').value.trim();
+
+    if (!phone && !emerg) {
+      alert('Informe ao menos um telefone.');
+      return;
+    }
+
+    if (id) {
+      const idx = contacts.findIndex(c => c.id == id);
+      if (idx >= 0) {
+        const original = contacts[idx];
+        contacts[idx] = { ...original, phone, emergency: emerg, email, address, hours };
+        if (!isDefaultContact(Number(id))) contacts[idx].name = name || original.name;
+      }
+    } else {
+      if (!name) { alert('Informe o nome da autoridade.'); return; }
+      contacts.push({ id: nextId++, name, type: 'prefeitura', phone, emergency: emerg, email, address, hours });
+    }
+
+    saveContacts();
+    renderContacts();
+    closeModal();
+  }
+
+  /* ── GLOW EFFECT ─────────────────────────────────────── */
+  function glow(card, e) {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }
+  function resetGlow(card) {
+    card.style.setProperty('--mx', '50%');
+    card.style.setProperty('--my', '50%');
+  }
+
+  /* ── LOGIN ───────────────────────────────────────────── */
+  function checkSession() {
+    return sessionStorage.getItem('flamer_admin') === '1';
+  }
+
+  function login(user, pass) {
+    return user === ADMIN_USER && pass === ADMIN_PASS;
+  }
+
+  function logout() {
+    sessionStorage.removeItem('flamer_admin');
+    document.getElementById('loginOverlay').style.display = 'flex';
+    document.getElementById('appShell').style.display = 'none';
+    document.getElementById('adminUser').value = '';
+    document.getElementById('adminPass').value = '';
+  }
+
+  /* ── SANITIZE ────────────────────────────────────────── */
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  /* ── INIT ────────────────────────────────────────────── */
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const user = document.getElementById('adminUser').value.trim();
+    const pass = document.getElementById('adminPass').value;
+    if (login(user, pass)) {
+      sessionStorage.setItem('flamer_admin', '1');
+      document.getElementById('loginError').classList.remove('visible');
+      document.getElementById('loginOverlay').style.display = 'none';
+      document.getElementById('appShell').style.display = 'block';
+    } else {
+      document.getElementById('loginError').classList.add('visible');
+      document.getElementById('adminPass').value = '';
+      document.getElementById('adminPass').focus();
+    }
+  });
+
+  document.getElementById('modalBackdrop').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  loadContacts();
+
+  if (checkSession()) {
+    document.getElementById('loginOverlay').style.display = 'none';
+    document.getElementById('appShell').style.display = 'block';
+  }
+</script>
+</body>
+</html>
